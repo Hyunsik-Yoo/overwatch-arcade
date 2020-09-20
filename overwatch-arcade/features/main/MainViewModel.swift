@@ -3,15 +3,17 @@ import SwiftUI
 
 class MainViewModel: ObservableObject {
   
-  var mode1: Mode!
-  var mode2: Mode!
-  var mode3: Mode!
-  var mode4: Mode!
-  var mode5: Mode!
-  var mode6: Mode!
-  var mode7: Mode!
+  var mode1: Mode? = nil
+  var mode2: Mode? = nil
+  var mode3: Mode? = nil
+  var mode4: Mode? = nil
+  var mode5: Mode? = nil
+  var mode6: Mode? = nil
+  var mode7: Mode? = nil
   
   var overwatchService: OverwatchServiceProtocol
+  
+  var setCancellable = Set<AnyCancellable>()
   
   
   init(overwatchService: OverwatchServiceProtocol) {
@@ -30,6 +32,6 @@ class MainViewModel: ObservableObject {
       self.mode5 = arcade.modes.tile_5
       self.mode6 = arcade.modes.tile_6
       self.mode7 = arcade.modes.tile_7
-    }
+    }.store(in: &setCancellable)
   }
 }

@@ -10,18 +10,22 @@ import SwiftUI
 import struct Kingfisher.KFImage
 
 struct ModeView: View {
-  @Binding var mode: Mode
+  @Binding var mode: Mode?
   
   var body: some View {
     ZStack {
-      KFImage(URL(string: mode.image)!)
-        .resizable()
-        .frame(width: 128, height: 128)
+      if let url = mode?.image {
+        KFImage(URL(string: url)!)
+          .resizable()
+          .frame(width: 128, height: 128)
+      }
       
       HStack {
         Spacer()
-        Text(mode.name)
-          .font(.custom("koverwatch", size: 10))
+        if let name = mode?.name {
+          Text(name)
+            .font(.custom("koverwatch", size: 10))
+        }
       }
     }
   }
