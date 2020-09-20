@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EFF1D8FE4FDF11357704B13 /* Pods_overwatch_widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C45D3299E25D0FB5818B4B /* Pods_overwatch_widget.framework */; };
+		5AEF6D68B07F6E87196DD6DB /* Pods_overwatch_arcade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */; };
+		6E26ABBD25013F35004ACB90 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E26ABBC25013F35004ACB90 /* NotificationCenter.framework */; };
+		6E26ABC025013F35004ACB90 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E26ABBF25013F35004ACB90 /* TodayViewController.swift */; };
+		6E26ABC325013F35004ACB90 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E26ABC125013F35004ACB90 /* MainInterface.storyboard */; };
+		6E26ABC725013F35004ACB90 /* overwatch-widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E8004422501E2FA00BFE452 /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8004412501E2FA00BFE452 /* Arcade.swift */; };
+		6E8004442501E30400BFE452 /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8004432501E30400BFE452 /* JsonUtils.swift */; };
+		6EA025752503C801004B4FC4 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA025742503C801004B4FC4 /* ModeView.swift */; };
+		6EA025772503CC83004B4FC4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA025762503CC83004B4FC4 /* Data.swift */; };
+		6EA0257A2503CD57004B4FC4 /* Arcade.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6EA025792503CD57004B4FC4 /* Arcade.geojson */; };
+		6EAA8CC025036151004274EB /* koverwatch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA8CBF25036150004274EB /* koverwatch.ttf */; };
+		6EAA8CC425036399004274EB /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC325036399004274EB /* Modes.swift */; };
+		6EAA8CC6250363A5004274EB /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC5250363A5004274EB /* Mode.swift */; };
+		6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC8250363ED004274EB /* OverwatchService.swift */; };
+		6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCA250377EC004274EB /* CommonError.swift */; };
+		6EAA8CCF25037921004274EB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCE25037921004274EB /* MainViewModel.swift */; };
+		6ED8D6822500C2B000B85CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6812500C2B000B85CDC /* AppDelegate.swift */; };
+		6ED8D6842500C2B000B85CDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6832500C2B000B85CDC /* SceneDelegate.swift */; };
+		6ED8D6862500C2B000B85CDC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6852500C2B000B85CDC /* MainView.swift */; };
+		6ED8D6882500C2B200B85CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D6872500C2B200B85CDC /* Assets.xcassets */; };
+		6ED8D68B2500C2B200B85CDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D68A2500C2B200B85CDC /* Preview Assets.xcassets */; };
+		6ED8D68E2500C2B200B85CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */; };
+		6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6972500C94400B85CDC /* Arcade.swift */; };
+		6ED8D69A2500C9B700B85CDC /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6992500C9B700B85CDC /* JsonUtils.swift */; };
+		6EE6C46D2501D9D900274828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE6C46C2501D9D900274828 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E26ABC525013F35004ACB90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6ED8D6762500C2B000B85CDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E26ABBA25013F35004ACB90;
+			remoteInfo = "overwatch-widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E26ABC825013F35004ACB90 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6E26ABC725013F35004ACB90 /* overwatch-widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0D2DAFF68D0F09745A9D53E4 /* Pods-overwatch-arcade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-arcade.release.xcconfig"; path = "Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade.release.xcconfig"; sourceTree = "<group>"; };
+		1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatch_arcade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3082978EF028F4AC32524457 /* Pods-overwatch-arcade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-arcade.debug.xcconfig"; path = "Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade.debug.xcconfig"; sourceTree = "<group>"; };
+		6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "overwatch-widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E26ABBC25013F35004ACB90 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6E26ABBF25013F35004ACB90 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		6E26ABC225013F35004ACB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6E26ABC425013F35004ACB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E8004412501E2FA00BFE452 /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
+		6E8004432501E30400BFE452 /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		6EA025742503C801004B4FC4 /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
+		6EA025762503CC83004B4FC4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		6EA025792503CD57004B4FC4 /* Arcade.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Arcade.geojson; sourceTree = "<group>"; };
+		6EAA8CBF25036150004274EB /* koverwatch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koverwatch.ttf; sourceTree = "<group>"; };
+		6EAA8CC325036399004274EB /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
+		6EAA8CC5250363A5004274EB /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		6EAA8CC8250363ED004274EB /* OverwatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchService.swift; sourceTree = "<group>"; };
+		6EAA8CCA250377EC004274EB /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		6EAA8CCE25037921004274EB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6ED8D67E2500C2B000B85CDC /* overwatch-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "overwatch-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED8D6812500C2B000B85CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6ED8D6832500C2B000B85CDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6ED8D6852500C2B000B85CDC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6ED8D6872500C2B200B85CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ED8D68A2500C2B200B85CDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6ED8D68D2500C2B200B85CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6ED8D68F2500C2B200B85CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ED8D6972500C94400B85CDC /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
+		6ED8D6992500C9B700B85CDC /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		6EE6C46C2501D9D900274828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A34F335484AD7F1ADA360B40 /* Pods-overwatch-widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-widget.release.xcconfig"; path = "Target Support Files/Pods-overwatch-widget/Pods-overwatch-widget.release.xcconfig"; sourceTree = "<group>"; };
+		CE734A30E962312D287591F9 /* Pods-overwatch-widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-widget.debug.xcconfig"; path = "Target Support Files/Pods-overwatch-widget/Pods-overwatch-widget.debug.xcconfig"; sourceTree = "<group>"; };
+		D4C45D3299E25D0FB5818B4B /* Pods_overwatch_widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatch_widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E26ABB825013F35004ACB90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E26ABBD25013F35004ACB90 /* NotificationCenter.framework in Frameworks */,
+				3EFF1D8FE4FDF11357704B13 /* Pods_overwatch_widget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED8D67B2500C2B000B85CDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEF6D68B07F6E87196DD6DB /* Pods_overwatch_arcade.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224DD4FD1252D829DCC77824 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3082978EF028F4AC32524457 /* Pods-overwatch-arcade.debug.xcconfig */,
+				0D2DAFF68D0F09745A9D53E4 /* Pods-overwatch-arcade.release.xcconfig */,
+				CE734A30E962312D287591F9 /* Pods-overwatch-widget.debug.xcconfig */,
+				A34F335484AD7F1ADA360B40 /* Pods-overwatch-widget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E26ABBE25013F35004ACB90 /* overwatch-widget */ = {
+			isa = PBXGroup;
+			children = (
+				6E26ABBF25013F35004ACB90 /* TodayViewController.swift */,
+				6E26ABC125013F35004ACB90 /* MainInterface.storyboard */,
+				6E26ABC425013F35004ACB90 /* Info.plist */,
+				6EE6C46C2501D9D900274828 /* Assets.xcassets */,
+				6E8004412501E2FA00BFE452 /* Arcade.swift */,
+				6E8004432501E30400BFE452 /* JsonUtils.swift */,
+			);
+			path = "overwatch-widget";
+			sourceTree = "<group>";
+		};
+		6EAA8CBD25036140004274EB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EAA8CBE25036145004274EB /* font */,
+				6EA025792503CD57004B4FC4 /* Arcade.geojson */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		6EAA8CBE25036145004274EB /* font */ = {
+			isa = PBXGroup;
+			children = (
+				6EAA8CBF25036150004274EB /* koverwatch.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		6EAA8CC125036363004274EB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6ED8D6972500C94400B85CDC /* Arcade.swift */,
+				6EAA8CC325036399004274EB /* Modes.swift */,
+				6EAA8CC5250363A5004274EB /* Mode.swift */,
+				6EAA8CCA250377EC004274EB /* CommonError.swift */,
+				6EA025762503CC83004B4FC4 /* Data.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6EAA8CC22503637F004274EB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				6ED8D6992500C9B700B85CDC /* JsonUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		6EAA8CC7250363DF004274EB /* services */ = {
+			isa = PBXGroup;
+			children = (
+				6EAA8CC8250363ED004274EB /* OverwatchService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		6EAA8CCC2503786D004274EB /* features */ = {
+			isa = PBXGroup;
+			children = (
+				6EAA8CCD25037872004274EB /* main */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		6EAA8CCD25037872004274EB /* main */ = {
+			isa = PBXGroup;
+			children = (
+				6ED8D6852500C2B000B85CDC /* MainView.swift */,
+				6EAA8CCE25037921004274EB /* MainViewModel.swift */,
+				6EA025742503C801004B4FC4 /* ModeView.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		6ED8D6752500C2B000B85CDC = {
+			isa = PBXGroup;
+			children = (
+				6ED8D6802500C2B000B85CDC /* overwatch-arcade */,
+				6E26ABBE25013F35004ACB90 /* overwatch-widget */,
+				6ED8D67F2500C2B000B85CDC /* Products */,
+				224DD4FD1252D829DCC77824 /* Pods */,
+				EAC6625BFCAFA897FC614D16 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6ED8D67F2500C2B000B85CDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6ED8D67E2500C2B000B85CDC /* overwatch-arcade.app */,
+				6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ED8D6802500C2B000B85CDC /* overwatch-arcade */ = {
+			isa = PBXGroup;
+			children = (
+				6EAA8CCC2503786D004274EB /* features */,
+				6EAA8CC7250363DF004274EB /* services */,
+				6EAA8CC22503637F004274EB /* utils */,
+				6EAA8CC125036363004274EB /* model */,
+				6EAA8CBD25036140004274EB /* resources */,
+				6ED8D6812500C2B000B85CDC /* AppDelegate.swift */,
+				6ED8D6832500C2B000B85CDC /* SceneDelegate.swift */,
+				6ED8D6872500C2B200B85CDC /* Assets.xcassets */,
+				6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */,
+				6ED8D68F2500C2B200B85CDC /* Info.plist */,
+				6ED8D6892500C2B200B85CDC /* Preview Content */,
+			);
+			path = "overwatch-arcade";
+			sourceTree = "<group>";
+		};
+		6ED8D6892500C2B200B85CDC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6ED8D68A2500C2B200B85CDC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EAC6625BFCAFA897FC614D16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */,
+				6E26ABBC25013F35004ACB90 /* NotificationCenter.framework */,
+				D4C45D3299E25D0FB5818B4B /* Pods_overwatch_widget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E26ABBA25013F35004ACB90 /* overwatch-widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E26ABCB25013F35004ACB90 /* Build configuration list for PBXNativeTarget "overwatch-widget" */;
+			buildPhases = (
+				63E61700AE5B1BA0D38FC7B1 /* [CP] Check Pods Manifest.lock */,
+				6E26ABB725013F35004ACB90 /* Sources */,
+				6E26ABB825013F35004ACB90 /* Frameworks */,
+				6E26ABB925013F35004ACB90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "overwatch-widget";
+			productName = "overwatch-widget";
+			productReference = 6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6ED8D67D2500C2B000B85CDC /* overwatch-arcade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ED8D6922500C2B200B85CDC /* Build configuration list for PBXNativeTarget "overwatch-arcade" */;
+			buildPhases = (
+				2B2489BDF34DFFCD936E88A7 /* [CP] Check Pods Manifest.lock */,
+				6ED8D67A2500C2B000B85CDC /* Sources */,
+				6ED8D67B2500C2B000B85CDC /* Frameworks */,
+				6ED8D67C2500C2B000B85CDC /* Resources */,
+				22A8CA4F85887F0A388584C1 /* [CP] Embed Pods Frameworks */,
+				6E26ABC825013F35004ACB90 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E26ABC625013F35004ACB90 /* PBXTargetDependency */,
+			);
+			name = "overwatch-arcade";
+			productName = "overwatch-arcade";
+			productReference = 6ED8D67E2500C2B000B85CDC /* overwatch-arcade.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6ED8D6762500C2B000B85CDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Macgongmon;
+				TargetAttributes = {
+					6E26ABBA25013F35004ACB90 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					6ED8D67D2500C2B000B85CDC = {
+						CreatedOnToolsVersion = 11.7;
+					};
+				};
+			};
+			buildConfigurationList = 6ED8D6792500C2B000B85CDC /* Build configuration list for PBXProject "overwatch-arcade" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6ED8D6752500C2B000B85CDC;
+			productRefGroup = 6ED8D67F2500C2B000B85CDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6ED8D67D2500C2B000B85CDC /* overwatch-arcade */,
+				6E26ABBA25013F35004ACB90 /* overwatch-widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E26ABB925013F35004ACB90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE6C46D2501D9D900274828 /* Assets.xcassets in Resources */,
+				6E26ABC325013F35004ACB90 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED8D67C2500C2B000B85CDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA0257A2503CD57004B4FC4 /* Arcade.geojson in Resources */,
+				6EAA8CC025036151004274EB /* koverwatch.ttf in Resources */,
+				6ED8D68E2500C2B200B85CDC /* LaunchScreen.storyboard in Resources */,
+				6ED8D68B2500C2B200B85CDC /* Preview Assets.xcassets in Resources */,
+				6ED8D6882500C2B200B85CDC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22A8CA4F85887F0A388584C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B2489BDF34DFFCD936E88A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-overwatch-arcade-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63E61700AE5B1BA0D38FC7B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-overwatch-widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E26ABB725013F35004ACB90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E26ABC025013F35004ACB90 /* TodayViewController.swift in Sources */,
+				6E8004422501E2FA00BFE452 /* Arcade.swift in Sources */,
+				6E8004442501E30400BFE452 /* JsonUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED8D67A2500C2B000B85CDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EAA8CC425036399004274EB /* Modes.swift in Sources */,
+				6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */,
+				6ED8D6822500C2B000B85CDC /* AppDelegate.swift in Sources */,
+				6ED8D6842500C2B000B85CDC /* SceneDelegate.swift in Sources */,
+				6ED8D69A2500C9B700B85CDC /* JsonUtils.swift in Sources */,
+				6EA025752503C801004B4FC4 /* ModeView.swift in Sources */,
+				6EAA8CCF25037921004274EB /* MainViewModel.swift in Sources */,
+				6EA025772503CC83004B4FC4 /* Data.swift in Sources */,
+				6ED8D6862500C2B000B85CDC /* MainView.swift in Sources */,
+				6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */,
+				6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */,
+				6EAA8CC6250363A5004274EB /* Mode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E26ABC625013F35004ACB90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E26ABBA25013F35004ACB90 /* overwatch-widget */;
+			targetProxy = 6E26ABC525013F35004ACB90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E26ABC125013F35004ACB90 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E26ABC225013F35004ACB90 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ED8D68D2500C2B200B85CDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E26ABC925013F35004ACB90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE734A30E962312D287591F9 /* Pods-overwatch-widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X975A2HM62;
+				INFOPLIST_FILE = "overwatch-widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.macgongmon.overwatch-arcade.overwatch-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6E26ABCA25013F35004ACB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A34F335484AD7F1ADA360B40 /* Pods-overwatch-widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X975A2HM62;
+				INFOPLIST_FILE = "overwatch-widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.macgongmon.overwatch-arcade.overwatch-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6ED8D6902500C2B200B85CDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6ED8D6912500C2B200B85CDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6ED8D6932500C2B200B85CDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3082978EF028F4AC32524457 /* Pods-overwatch-arcade.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"overwatch-arcade/Preview Content\"";
+				DEVELOPMENT_TEAM = X975A2HM62;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "overwatch-arcade/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.macgongmon.overwatch-arcade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6ED8D6942500C2B200B85CDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D2DAFF68D0F09745A9D53E4 /* Pods-overwatch-arcade.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"overwatch-arcade/Preview Content\"";
+				DEVELOPMENT_TEAM = X975A2HM62;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "overwatch-arcade/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.macgongmon.overwatch-arcade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E26ABCB25013F35004ACB90 /* Build configuration list for PBXNativeTarget "overwatch-widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E26ABC925013F35004ACB90 /* Debug */,
+				6E26ABCA25013F35004ACB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED8D6792500C2B000B85CDC /* Build configuration list for PBXProject "overwatch-arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED8D6902500C2B200B85CDC /* Debug */,
+				6ED8D6912500C2B200B85CDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED8D6922500C2B200B85CDC /* Build configuration list for PBXNativeTarget "overwatch-arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED8D6932500C2B200B85CDC /* Debug */,
+				6ED8D6942500C2B200B85CDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6ED8D6762500C2B000B85CDC /* Project object */;
+}
