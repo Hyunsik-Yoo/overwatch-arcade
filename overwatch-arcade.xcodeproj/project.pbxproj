@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3EFF1D8FE4FDF11357704B13 /* Pods_overwatch_widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C45D3299E25D0FB5818B4B /* Pods_overwatch_widget.framework */; };
 		5AEF6D68B07F6E87196DD6DB /* Pods_overwatch_arcade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */; };
-		6E26ABBD25013F35004ACB90 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E26ABBC25013F35004ACB90 /* NotificationCenter.framework */; };
-		6E26ABC025013F35004ACB90 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E26ABBF25013F35004ACB90 /* TodayViewController.swift */; };
-		6E26ABC325013F35004ACB90 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E26ABC125013F35004ACB90 /* MainInterface.storyboard */; };
-		6E26ABC725013F35004ACB90 /* overwatch-widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6E8004422501E2FA00BFE452 /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8004412501E2FA00BFE452 /* Arcade.swift */; };
-		6E8004442501E30400BFE452 /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8004432501E30400BFE452 /* JsonUtils.swift */; };
+		6E3725CC25203DE70095D7FB /* OverwatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC8250363ED004274EB /* OverwatchService.swift */; };
+		6E3725CF25203DF30095D7FB /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6992500C9B700B85CDC /* JsonUtils.swift */; };
+		6E3725DD25206D100095D7FB /* ArcadeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3725D725206BAD0095D7FB /* ArcadeEntry.swift */; };
+		6E3725E625206DAD0095D7FB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3725E225206D840095D7FB /* Provider.swift */; };
+		6E3725F525206DF00095D7FB /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3725F125206DD80095D7FB /* WidgetView.swift */; };
 		6E92C04E25174B61009E5E48 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92C04D25174B61009E5E48 /* WidgetKit.framework */; };
 		6E92C05025174B61009E5E48 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92C04F25174B61009E5E48 /* SwiftUI.framework */; };
 		6E92C05325174B61009E5E48 /* arcard_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92C05225174B61009E5E48 /* arcard_widget.swift */; };
@@ -23,8 +21,6 @@
 		6E92C05925174B62009E5E48 /* arcard_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6E92C05425174B61009E5E48 /* arcard_widget.intentdefinition */; };
 		6E92C05C25174B62009E5E48 /* arcard-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E92C04C25174B61009E5E48 /* arcard-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6E92C06F25176610009E5E48 /* koverwatch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E92C06D25176610009E5E48 /* koverwatch.ttf */; };
-		6E92C0B125178915009E5E48 /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6992500C9B700B85CDC /* JsonUtils.swift */; };
-		6E92C0BE25178949009E5E48 /* OverwatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC8250363ED004274EB /* OverwatchService.swift */; };
 		6E92C0C225178959009E5E48 /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6972500C94400B85CDC /* Arcade.swift */; };
 		6E92C0C625178961009E5E48 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCA250377EC004274EB /* CommonError.swift */; };
 		6E92C0CA25178975009E5E48 /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC325036399004274EB /* Modes.swift */; };
@@ -46,18 +42,10 @@
 		6ED8D68E2500C2B200B85CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */; };
 		6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6972500C94400B85CDC /* Arcade.swift */; };
 		6ED8D69A2500C9B700B85CDC /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6992500C9B700B85CDC /* JsonUtils.swift */; };
-		6EE6C46D2501D9D900274828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE6C46C2501D9D900274828 /* Assets.xcassets */; };
 		75E94BEFBC769533AC1A2FD1 /* Pods_arcard_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2066F8F1AC569FEDED6E220 /* Pods_arcard_widgetExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E26ABC525013F35004ACB90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6ED8D6762500C2B000B85CDC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E26ABBA25013F35004ACB90;
-			remoteInfo = "overwatch-widget";
-		};
 		6E92C05A25174B62009E5E48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6ED8D6762500C2B000B85CDC /* Project object */;
@@ -74,7 +62,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6E26ABC725013F35004ACB90 /* overwatch-widget.appex in Embed App Extensions */,
 				6E92C05C25174B62009E5E48 /* arcard-widgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -86,13 +73,10 @@
 		0D2DAFF68D0F09745A9D53E4 /* Pods-overwatch-arcade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-arcade.release.xcconfig"; path = "Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade.release.xcconfig"; sourceTree = "<group>"; };
 		1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatch_arcade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3082978EF028F4AC32524457 /* Pods-overwatch-arcade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-arcade.debug.xcconfig"; path = "Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade.debug.xcconfig"; sourceTree = "<group>"; };
-		6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "overwatch-widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E26ABBC25013F35004ACB90 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		6E26ABBF25013F35004ACB90 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		6E26ABC225013F35004ACB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		6E26ABC425013F35004ACB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E8004412501E2FA00BFE452 /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
-		6E8004432501E30400BFE452 /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		6E3725D725206BAD0095D7FB /* ArcadeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeEntry.swift; sourceTree = "<group>"; };
+		6E3725E225206D840095D7FB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		6E3725F125206DD80095D7FB /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		6E92C04C25174B61009E5E48 /* arcard-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "arcard-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92C04D25174B61009E5E48 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6E92C04F25174B61009E5E48 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -120,7 +104,6 @@
 		6ED8D68F2500C2B200B85CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED8D6972500C94400B85CDC /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
 		6ED8D6992500C9B700B85CDC /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
-		6EE6C46C2501D9D900274828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9574A1B83632B0EDD1432FF0 /* Pods-arcard-widgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcard-widgetExtension.release.xcconfig"; path = "Target Support Files/Pods-arcard-widgetExtension/Pods-arcard-widgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		A34F335484AD7F1ADA360B40 /* Pods-overwatch-widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-widget.release.xcconfig"; path = "Target Support Files/Pods-overwatch-widget/Pods-overwatch-widget.release.xcconfig"; sourceTree = "<group>"; };
 		C44C4AACFE5775397C5A0E28 /* Pods-arcard-widgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcard-widgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-arcard-widgetExtension/Pods-arcard-widgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,15 +113,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E26ABB825013F35004ACB90 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E26ABBD25013F35004ACB90 /* NotificationCenter.framework in Frameworks */,
-				3EFF1D8FE4FDF11357704B13 /* Pods_overwatch_widget.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E92C04925174B61009E5E48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,27 +147,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6E26ABBE25013F35004ACB90 /* overwatch-widget */ = {
+		6E3725D625206BA00095D7FB /* model */ = {
 			isa = PBXGroup;
 			children = (
-				6E26ABBF25013F35004ACB90 /* TodayViewController.swift */,
-				6E26ABC125013F35004ACB90 /* MainInterface.storyboard */,
-				6E26ABC425013F35004ACB90 /* Info.plist */,
-				6EE6C46C2501D9D900274828 /* Assets.xcassets */,
-				6E8004412501E2FA00BFE452 /* Arcade.swift */,
-				6E8004432501E30400BFE452 /* JsonUtils.swift */,
+				6E3725D725206BAD0095D7FB /* ArcadeEntry.swift */,
 			);
-			path = "overwatch-widget";
+			path = model;
 			sourceTree = "<group>";
 		};
 		6E92C05125174B61009E5E48 /* arcard-widget */ = {
 			isa = PBXGroup;
 			children = (
+				6E3725D625206BA00095D7FB /* model */,
 				6E92C06B251765F9009E5E48 /* resource */,
 				6E92C05225174B61009E5E48 /* arcard_widget.swift */,
 				6E92C05425174B61009E5E48 /* arcard_widget.intentdefinition */,
 				6E92C05525174B62009E5E48 /* Assets.xcassets */,
 				6E92C05725174B62009E5E48 /* Info.plist */,
+				6E3725E225206D840095D7FB /* Provider.swift */,
+				6E3725F125206DD80095D7FB /* WidgetView.swift */,
 			);
 			path = "arcard-widget";
 			sourceTree = "<group>";
@@ -281,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				6ED8D6802500C2B000B85CDC /* overwatch-arcade */,
-				6E26ABBE25013F35004ACB90 /* overwatch-widget */,
 				6E92C05125174B61009E5E48 /* arcard-widget */,
 				6ED8D67F2500C2B000B85CDC /* Products */,
 				224DD4FD1252D829DCC77824 /* Pods */,
@@ -293,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				6ED8D67E2500C2B000B85CDC /* overwatch-arcade.app */,
-				6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */,
 				6E92C04C25174B61009E5E48 /* arcard-widgetExtension.appex */,
 			);
 			name = Products;
@@ -341,24 +311,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E26ABBA25013F35004ACB90 /* overwatch-widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6E26ABCB25013F35004ACB90 /* Build configuration list for PBXNativeTarget "overwatch-widget" */;
-			buildPhases = (
-				63E61700AE5B1BA0D38FC7B1 /* [CP] Check Pods Manifest.lock */,
-				6E26ABB725013F35004ACB90 /* Sources */,
-				6E26ABB825013F35004ACB90 /* Frameworks */,
-				6E26ABB925013F35004ACB90 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "overwatch-widget";
-			productName = "overwatch-widget";
-			productReference = 6E26ABBB25013F35004ACB90 /* overwatch-widget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		6E92C04B25174B61009E5E48 /* arcard-widgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E92C05D25174B62009E5E48 /* Build configuration list for PBXNativeTarget "arcard-widgetExtension" */;
@@ -391,7 +343,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6E26ABC625013F35004ACB90 /* PBXTargetDependency */,
 				6E92C05B25174B62009E5E48 /* PBXTargetDependency */,
 			);
 			name = "overwatch-arcade";
@@ -409,9 +360,6 @@
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = Macgongmon;
 				TargetAttributes = {
-					6E26ABBA25013F35004ACB90 = {
-						CreatedOnToolsVersion = 11.7;
-					};
 					6E92C04B25174B61009E5E48 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -434,22 +382,12 @@
 			projectRoot = "";
 			targets = (
 				6ED8D67D2500C2B000B85CDC /* overwatch-arcade */,
-				6E26ABBA25013F35004ACB90 /* overwatch-widget */,
 				6E92C04B25174B61009E5E48 /* arcard-widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6E26ABB925013F35004ACB90 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EE6C46D2501D9D900274828 /* Assets.xcassets in Resources */,
-				6E26ABC325013F35004ACB90 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E92C04A25174B61009E5E48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,53 +473,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63E61700AE5B1BA0D38FC7B1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-overwatch-widget-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6E26ABB725013F35004ACB90 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E26ABC025013F35004ACB90 /* TodayViewController.swift in Sources */,
-				6E8004422501E2FA00BFE452 /* Arcade.swift in Sources */,
-				6E8004442501E30400BFE452 /* JsonUtils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E92C04825174B61009E5E48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3725F525206DF00095D7FB /* WidgetView.swift in Sources */,
 				6E92C0CA25178975009E5E48 /* Modes.swift in Sources */,
 				6E92C05325174B61009E5E48 /* arcard_widget.swift in Sources */,
 				6E92C0CE25178978009E5E48 /* Mode.swift in Sources */,
 				6E92C0C625178961009E5E48 /* CommonError.swift in Sources */,
+				6E3725DD25206D100095D7FB /* ArcadeEntry.swift in Sources */,
+				6E3725CC25203DE70095D7FB /* OverwatchService.swift in Sources */,
+				6E3725CF25203DF30095D7FB /* JsonUtils.swift in Sources */,
 				6E92C0C225178959009E5E48 /* Arcade.swift in Sources */,
-				6E92C0BE25178949009E5E48 /* OverwatchService.swift in Sources */,
+				6E3725E625206DAD0095D7FB /* Provider.swift in Sources */,
 				6E92C05825174B62009E5E48 /* arcard_widget.intentdefinition in Sources */,
-				6E92C0B125178915009E5E48 /* JsonUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,11 +517,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E26ABC625013F35004ACB90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6E26ABBA25013F35004ACB90 /* overwatch-widget */;
-			targetProxy = 6E26ABC525013F35004ACB90 /* PBXContainerItemProxy */;
-		};
 		6E92C05B25174B62009E5E48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E92C04B25174B61009E5E48 /* arcard-widgetExtension */;
@@ -621,14 +525,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6E26ABC125013F35004ACB90 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E26ABC225013F35004ACB90 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -640,48 +536,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6E26ABC925013F35004ACB90 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE734A30E962312D287591F9 /* Pods-overwatch-widget.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X975A2HM62;
-				INFOPLIST_FILE = "overwatch-widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.macgongmon.overwatch-arcade.overwatch-widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		6E26ABCA25013F35004ACB90 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A34F335484AD7F1ADA360B40 /* Pods-overwatch-widget.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X975A2HM62;
-				INFOPLIST_FILE = "overwatch-widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.macgongmon.overwatch-arcade.overwatch-widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
 		6E92C05E25174B62009E5E48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C44C4AACFE5775397C5A0E28 /* Pods-arcard-widgetExtension.debug.xcconfig */;
@@ -891,15 +745,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E26ABCB25013F35004ACB90 /* Build configuration list for PBXNativeTarget "overwatch-widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6E26ABC925013F35004ACB90 /* Debug */,
-				6E26ABCA25013F35004ACB90 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6E92C05D25174B62009E5E48 /* Build configuration list for PBXNativeTarget "arcard-widgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
