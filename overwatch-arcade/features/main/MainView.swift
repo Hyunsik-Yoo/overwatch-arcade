@@ -35,7 +35,7 @@ struct MainView: View {
               )
               .padding(.top, 64 * RatioUtils.heightRatio)
             
-            Text("2020. 09.30")
+            Text(self.viewModel.todayDate)
               .font(.custom("koverwatch", size: 20 * RatioUtils.widthRatio))
               .foregroundColor(.white)
               .padding(.top, 16 * RatioUtils.heightRatio)

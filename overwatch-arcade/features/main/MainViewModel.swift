@@ -6,6 +6,7 @@ class MainViewModel: ObservableObject {
   @Published var predictedValue = 0
   @Published var iconOpacity = 1.0
   @Published var titleText = ""
+  @Published var todayDate = "0000.00.00"
   @Published var mode1: Mode? = nil
   @Published var mode2: Mode? = nil
   @Published var mode3: Mode? = nil
@@ -32,6 +33,7 @@ class MainViewModel: ObservableObject {
         self.iconOpacity = 0.5
       }
     }.store(in: &setCancellable)
+    self.setTodayDate()
   }
   
   func fetchArcade() {
@@ -52,6 +54,14 @@ class MainViewModel: ObservableObject {
 
       self.totalMayhemFilter.send(isTodayMayhem)
     }.store(in: &setCancellable)
+  }
+  
+  func setTodayDate() {
+    let date = Date()
+    let formatter = DateFormatter()
+    
+    formatter.dateFormat = "yyyy-MM-dd"
+    self.todayDate = formatter.string(from: date)
   }
   
   private func startOpacityAnimation() {
