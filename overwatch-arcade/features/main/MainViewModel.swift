@@ -3,6 +3,8 @@ import SwiftUI
 
 class MainViewModel: ObservableObject {
   
+  @Published var predictedValue = 0
+  @Published var isTodayTotalMayhem = false
   @Published var mode1: Mode? = nil
   @Published var mode2: Mode? = nil
   @Published var mode3: Mode? = nil
