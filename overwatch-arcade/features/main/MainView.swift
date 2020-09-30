@@ -1,4 +1,3 @@
-
 import SwiftUI
 import Alamofire
 import struct Kingfisher.KFImage
@@ -26,6 +25,7 @@ struct MainView: View {
         HStack {
           ModeView(mode: self.$viewModel.mode7)
         }
+        Spacer()
       }
     }.onAppear(perform: self.viewModel.fetchArcade)
   }

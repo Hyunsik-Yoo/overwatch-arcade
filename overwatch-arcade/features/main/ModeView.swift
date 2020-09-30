@@ -20,13 +20,15 @@ struct ModeView: View {
           .frame(width: 128, height: 128)
       }
       
-      HStack {
+      VStack {
         Spacer()
+        
         if let name = mode?.name {
           Text(name)
             .font(.custom("koverwatch", size: 10))
         }
       }
+      .frame(width: 128, height: 128)
     }
   }
 }

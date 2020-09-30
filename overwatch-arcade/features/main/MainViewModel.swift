@@ -3,13 +3,13 @@ import SwiftUI
 
 class MainViewModel: ObservableObject {
   
-  var mode1: Mode? = nil
-  var mode2: Mode? = nil
-  var mode3: Mode? = nil
-  var mode4: Mode? = nil
-  var mode5: Mode? = nil
-  var mode6: Mode? = nil
-  var mode7: Mode? = nil
+  @Published var mode1: Mode? = nil
+  @Published var mode2: Mode? = nil
+  @Published var mode3: Mode? = nil
+  @Published var mode4: Mode? = nil
+  @Published var mode5: Mode? = nil
+  @Published var mode6: Mode? = nil
+  @Published var mode7: Mode? = nil
   
   var overwatchService: OverwatchServiceProtocol
   
@@ -25,6 +25,7 @@ class MainViewModel: ObservableObject {
       
     }) { [weak self] arcade in
       guard let self = self else { return }
+      print(arcade)
       self.mode1 = arcade.modes.tile_1
       self.mode2 = arcade.modes.tile_2
       self.mode3 = arcade.modes.tile_3

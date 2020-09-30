@@ -2,9 +2,9 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
-let arcade: Arcade = loadData("Arcade.json")
+let arcadeData: [Arcade] = load("SampleArcade.json")
 
-func loadData<T: Decodable>(_ filename: String) -> T {
+func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
