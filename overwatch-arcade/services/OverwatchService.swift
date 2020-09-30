@@ -14,7 +14,7 @@ struct OverwatchService: OverwatchServiceProtocol {
       Alamofire.request(urlString, method: .get).responseJSON { response in
         if let value = response.value {
           let arcade: Arcade = JsonUtils.toJson(object: value)!
-
+          
           promise(.success(arcade))
         }
         else {

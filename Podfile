@@ -21,3 +21,11 @@ target 'overwatch-widget' do
   pod 'Kingfisher/SwiftUI'
 end
 
+target 'arcard-widgetExtension' do
+  use_frameworks!
+  
+  pod 'Alamofire', '~> 4.9.1'
+  pod 'AlamofireNetworkActivityLogger', '~> 2.4'
+  pod 'Kingfisher'
+  pod 'Kingfisher/SwiftUI'
+end
