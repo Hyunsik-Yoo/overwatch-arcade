@@ -79,7 +79,7 @@ class MainViewModel: ObservableObject {
   
   private func setRemainTimer() {
     remainTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-      let nextDate = Calendar.current.startOfDay(for: Date()).addingTimeInterval(60 * 60 * 24)
+      let nextDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!.addingTimeInterval(60 * 60 * 24)
       let current = Date()
 
       self.setRemainTime(remainTime: Int(nextDate.timeIntervalSince(current)))
