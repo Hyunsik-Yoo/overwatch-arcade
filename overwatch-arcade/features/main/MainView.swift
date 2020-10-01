@@ -56,7 +56,7 @@ struct MainView: View {
               
               Spacer()
               
-              Text("18:42:21")
+              Text(self.viewModel.remainTime)
                 .font(.custom("koverwatch", size: 20 * RatioUtils.widthRatio))
                 .foregroundColor(.white)
             }

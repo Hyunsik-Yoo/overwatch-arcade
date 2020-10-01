@@ -14,10 +14,12 @@ class MainViewModel: ObservableObject {
   @Published var mode5: Mode? = nil
   @Published var mode6: Mode? = nil
   @Published var mode7: Mode? = nil
+  @Published var remainTime = "00:00:00"
   
   var overwatchService: OverwatchServiceProtocol
   
   var setCancellable = Set<AnyCancellable>()
+  var remainTimer: Timer?
   let totalMayhemFilter = PassthroughSubject<Bool, Never>()
   
   
@@ -34,6 +36,11 @@ class MainViewModel: ObservableObject {
       }
     }.store(in: &setCancellable)
     self.setTodayDate()
+    self.setRemainTimer()
+  }
+  
+  deinit {
+    self.remainTimer?.invalidate()
   }
   
   func fetchArcade() {
@@ -68,5 +75,22 @@ class MainViewModel: ObservableObject {
     withAnimation(Animation.easeInOut(duration: 1).repeatForever()) {
       self.iconOpacity = 0
     }
+  }
+  
+  private func setRemainTimer() {
+    remainTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+      let nextDate = Calendar.current.startOfDay(for: Date()).addingTimeInterval(60 * 60 * 24)
+      let current = Date()
+
+      self.setRemainTime(remainTime: Int(nextDate.timeIntervalSince(current)))
+    }
+  }
+  
+  private func setRemainTime(remainTime: Int) {
+    let second = remainTime % 60
+    let minutes = remainTime / 60 % 60
+    let hours = remainTime / 60 / 60
+    
+    self.remainTime = String(format: "%02d:%02d:%02d", hours, minutes, second)
   }
 }
