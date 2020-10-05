@@ -19,7 +19,7 @@ struct MainView: View {
               Spacer()
               
               NavigationLink(
-                destination: Text("Destination"),
+                destination: HistoryView(),
                 label: {
                   Image("ic_history")
                 })
