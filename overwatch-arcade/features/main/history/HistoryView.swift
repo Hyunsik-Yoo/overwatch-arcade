@@ -14,6 +14,7 @@ struct HistoryView: View {
   
   @State var tabBarPadding: CGFloat = 0
   @State var pageOffset: CGFloat = 0
+  @State var pageIndex = 0
   
   var body: some View {
     ZStack {
@@ -42,7 +43,7 @@ struct HistoryView: View {
             
           }, label: {
             Text("아케이드 모드 비율")
-              .foregroundColor(.white)
+              .foregroundColor(self.pageIndex == 0 ? .white : Color(r: 108, g: 108, b: 108))
               .font(Font.custom("koverwatch", size: 16 * RatioUtils.widthRatio))
               .frame(width: UIScreen.main.bounds.width / 2)
               .padding(.top, 12 * RatioUtils.heightRatio)
@@ -52,13 +53,13 @@ struct HistoryView: View {
             
           }, label: {
             Text("아케이드 모드 기록")
-              .foregroundColor(Color(r: 108, g: 108, b: 108))
+              .foregroundColor(self.pageIndex == 0 ? Color(r: 108, g: 108, b: 108) : .white)
               .font(Font.custom("koverwatch", size: 16 * RatioUtils.widthRatio))
               .frame(width: UIScreen.main.bounds.width / 2)
               .padding(.top, 12 * RatioUtils.heightRatio)
               .padding(.bottom, 12 * RatioUtils.heightRatio)
           })
-          Spacer()
+          
         }
         
         Rectangle()
@@ -104,10 +105,12 @@ struct HistoryView: View {
     if left {
       self.pageOffset = -UIScreen.main.bounds.width
       self.tabBarPadding = UIScreen.main.bounds.width / 2
+      self.pageIndex = 1
     }
     else {
       self.pageOffset = 0
       self.tabBarPadding = 0
+      self.pageIndex = 0
     }
   }
 }
