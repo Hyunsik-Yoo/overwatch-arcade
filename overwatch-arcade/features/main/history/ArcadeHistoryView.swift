@@ -1,5 +1,5 @@
 //
-//  ArcadeRatioView.swift
+//  ArcadeHistoryView.swift
 //  overwatch-arcade
 //
 //  Created by Hyunsik Yoo on 2020/10/09.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ArcadeRatioView: View {
+struct ArcadeHistoryView: View {
   
   init() {
     UITableView.appearance().backgroundColor = UIColor(r: 28, g: 30, b: 31)
@@ -18,22 +18,24 @@ struct ArcadeRatioView: View {
   
   var body: some View {
     List {
-      ArcadeRatioCell()
+      ArcadeHistoryCell()
         .listRowInsets(.init())
-      ArcadeRatioCell()
+      ArcadeHistoryCell()
         .listRowInsets(.init())
-      ArcadeRatioCell()
+      ArcadeHistoryCell()
         .listRowInsets(.init())
-      ArcadeRatioCell()
+      ArcadeHistoryCell()
         .listRowInsets(.init())
-      ArcadeRatioCell()
+      ArcadeHistoryCell()
+        .listRowInsets(.init())
+      ArcadeHistoryCell()
         .listRowInsets(.init())
     }
   }
 }
 
-struct ArcadeRatioView_Previews: PreviewProvider {
+struct ArcadeHistoryView_Previews: PreviewProvider {
   static var previews: some View {
-    ArcadeRatioView()
+    ArcadeHistoryView()
   }
 }

@@ -80,7 +80,7 @@ struct HistoryView: View {
           HStack(spacing: 0) {
             ArcadeRatioView()
               .frame(width: geo.frame(in: .global).width)
-            Color.green
+            ArcadeHistoryView()
               .frame(width: geo.frame(in: .global).width)
           }
           .offset(x: self.pageOffset)
