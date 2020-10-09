@@ -10,26 +10,40 @@ import SwiftUI
 
 struct ArcadeHistoryView: View {
   
+  @ObservedObject var viewModel = ArcadeHistoryViewModel(overwatchService: OverwatchService())
+  
   init() {
     UITableView.appearance().backgroundColor = UIColor(r: 28, g: 30, b: 31)
     UITableView.appearance().tableFooterView = UIView()
-    
   }
   
   var body: some View {
-    List {
-      ArcadeHistoryCell()
-        .listRowInsets(.init())
-      ArcadeHistoryCell()
-        .listRowInsets(.init())
-      ArcadeHistoryCell()
-        .listRowInsets(.init())
-      ArcadeHistoryCell()
-        .listRowInsets(.init())
-      ArcadeHistoryCell()
-        .listRowInsets(.init())
-      ArcadeHistoryCell()
-        .listRowInsets(.init())
+    if let arcades = self.viewModel.arcades {
+      List(arcades, id: \.created_at) { arcade in
+        ArcadeHistoryCell(arcade: arcade)
+          .listRowInsets(.init())
+      }
+      .onAppear {
+        self.viewModel.fetchArcadeHistory()
+      }
+    } else {
+      List {
+        ArcadeHistoryCell()
+          .listRowInsets(.init())
+        ArcadeHistoryCell()
+          .listRowInsets(.init())
+        ArcadeHistoryCell()
+          .listRowInsets(.init())
+        ArcadeHistoryCell()
+          .listRowInsets(.init())
+        ArcadeHistoryCell()
+          .listRowInsets(.init())
+        ArcadeHistoryCell()
+          .listRowInsets(.init())
+      }
+      .onAppear {
+        self.viewModel.fetchArcadeHistory()
+      }
     }
   }
 }

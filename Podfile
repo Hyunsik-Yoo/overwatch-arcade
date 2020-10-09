@@ -14,8 +14,6 @@ target 'overwatch-arcade' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
-
-  # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
 end
 
@@ -26,4 +24,5 @@ target 'arcard-widgetExtension' do
   pod 'AlamofireNetworkActivityLogger', '~> 2.4'
   pod 'Kingfisher'
   pod 'Kingfisher/SwiftUI'
+  
 end

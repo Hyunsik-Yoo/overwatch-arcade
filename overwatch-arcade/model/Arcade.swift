@@ -3,6 +3,10 @@ struct Arcade: Codable {
   var is_today = true
   var modes: Modes
   
+  init(map: [String: Any]) {
+    self.modes = Modes(map: map["modes"] as! [String: Any]) 
+  }
+  
   func getModes() -> [Mode] {
     return [
       modes.tile_1, modes.tile_2, modes.tile_3, modes.tile_4,

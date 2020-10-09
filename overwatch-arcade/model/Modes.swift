@@ -7,6 +7,16 @@ struct Modes: Codable {
   var tile_6: Mode
   var tile_7: Mode
   
+  init(map: [String: Any]) {
+    self.tile_1 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_2 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_3 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_4 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_5 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_6 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_7 = Mode(map: map["tile_1"] as! [String: Any])
+  }
+  
   func toDict() -> [String: Any] {
     return [
       "tile_1": tile_1.toDict(),

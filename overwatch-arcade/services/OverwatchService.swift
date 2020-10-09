@@ -1,8 +1,11 @@
 import Combine
+import FirebaseFirestore
 import Alamofire
+
 
 protocol OverwatchServiceProtocol {
   func getArcade() -> AnyPublisher<Arcade, Error>
+  func getArcadeHistory() -> AnyPublisher<[Arcade], Error>
 }
 
 struct OverwatchService: OverwatchServiceProtocol {
@@ -21,6 +24,30 @@ struct OverwatchService: OverwatchServiceProtocol {
           let error = CommonError(desc: "value is nil")
           
           promise(.failure(error))
+        }
+      }
+    }.eraseToAnyPublisher()
+  }
+  
+  func getArcadeHistory() -> AnyPublisher<[Arcade], Error> {
+    return Future { promise in
+      Firestore.firestore().collection("arcade").getDocuments { (document, error) in
+        if let error = error {
+          let error = CommonError(desc: error.localizedDescription)
+
+          promise(.failure(error))
+        } else {
+          if let document = document {
+
+            var arcades: [Arcade] = []
+            for data in document.documents {
+              let arcade = Arcade(map: data.data())
+
+              arcades.append(arcade)
+            }
+
+            promise(.success(arcades))
+          }
         }
       }
     }.eraseToAnyPublisher()
