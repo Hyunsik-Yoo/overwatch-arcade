@@ -9,4 +9,10 @@ struct Arcade: Codable {
       modes.tile_5, modes.tile_6, modes.tile_7
     ]
   }
+  
+  func toDict() -> [String: Any] {
+    return [
+      "modes": modes.toDict()
+    ]
+  }
 }

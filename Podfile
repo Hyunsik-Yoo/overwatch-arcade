@@ -10,15 +10,13 @@ target 'overwatch-arcade' do
   pod 'AlamofireNetworkActivityLogger', '~> 2.4'
   pod 'Kingfisher/SwiftUI'
   pod 'Kingfisher'
-end
-
-target 'overwatch-widget' do
-  use_frameworks!
   
-  pod 'Alamofire', '~> 4.9.1'
-  pod 'AlamofireNetworkActivityLogger', '~> 2.4'
-  pod 'Kingfisher'
-  pod 'Kingfisher/SwiftUI'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+
+  # Optionally, include the Swift extensions if you're using Swift.
+  pod 'FirebaseFirestoreSwift'
 end
 
 target 'arcard-widgetExtension' do

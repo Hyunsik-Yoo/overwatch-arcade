@@ -1,5 +1,6 @@
 import Combine
 import SwiftUI
+import FirebaseFirestore
 
 class MainViewModel: ObservableObject {
   
@@ -60,6 +61,7 @@ class MainViewModel: ObservableObject {
       self.mode7 = arcade.modes.tile_7
 
       self.totalMayhemFilter.send(isTodayMayhem)
+      self.updateFirestoreArcade(arcade: arcade)
     }.store(in: &setCancellable)
   }
   
@@ -69,6 +71,23 @@ class MainViewModel: ObservableObject {
     
     formatter.dateFormat = "yyyy-MM-dd"
     self.todayDate = formatter.string(from: date)
+  }
+  
+  private func updateFirestoreArcade(arcade: Arcade) {
+    let firestore = Firestore.firestore()
+    let todayString = DateUtils.getTodayString()
+    let todayArcadeDocument = firestore.collection("arcade").document(todayString)
+    todayArcadeDocument.getDocument { (document, error) in
+      if let document = document {
+        if !document.exists {
+          todayArcadeDocument.setData(arcade.toDict())
+        }
+      }
+      
+      if let error = error {
+        print("error: \(error.localizedDescription)")
+      }
+    }
   }
   
   private func startOpacityAnimation() {
