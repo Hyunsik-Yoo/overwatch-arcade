@@ -40,7 +40,7 @@ struct HistoryView: View {
         
         HStack(spacing: 0) {
           Button(action: {
-            
+            self.changeView(left: false)
           }, label: {
             Text("아케이드 모드 비율")
               .foregroundColor(self.pageIndex == 0 ? .white : Color(r: 108, g: 108, b: 108))
@@ -50,7 +50,7 @@ struct HistoryView: View {
               .padding(.bottom, 12 * RatioUtils.heightRatio)
           })
           Button(action: {
-            
+            self.changeView(left: true)
           }, label: {
             Text("아케이드 모드 기록")
               .foregroundColor(self.pageIndex == 0 ? Color(r: 108, g: 108, b: 108) : .white)
@@ -78,7 +78,7 @@ struct HistoryView: View {
         
         GeometryReader { geo in
           HStack(spacing: 0) {
-            Color.red
+            ArcadeRatioView()
               .frame(width: geo.frame(in: .global).width)
             Color.green
               .frame(width: geo.frame(in: .global).width)
