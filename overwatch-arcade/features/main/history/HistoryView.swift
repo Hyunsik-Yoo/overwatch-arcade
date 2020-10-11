@@ -12,9 +12,12 @@ struct HistoryView: View {
   
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   
+  @ObservedObject var viewModel = HistoryViewModel(overwatchService: OverwatchService())
+  
   @State var tabBarPadding: CGFloat = 0
   @State var pageOffset: CGFloat = 0
   @State var pageIndex = 0
+  
   
   var body: some View {
     ZStack {
@@ -80,7 +83,7 @@ struct HistoryView: View {
           HStack(spacing: 0) {
             ArcadeRatioView()
               .frame(width: geo.frame(in: .global).width)
-            ArcadeHistoryView()
+            ArcadeHistoryView(arcades: self.$viewModel.arcades)
               .frame(width: geo.frame(in: .global).width)
           }
           .offset(x: self.pageOffset)
@@ -99,6 +102,9 @@ struct HistoryView: View {
       }
     }
     .navigationBarHidden(true)
+    .onAppear {
+      self.viewModel.fetchArcadeHistory()
+    }
   }
   
   func changeView(left : Bool){

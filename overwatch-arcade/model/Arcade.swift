@@ -1,9 +1,10 @@
 struct Arcade: Codable {
-  var created_at = ""
+  var created_at: String
   var is_today = true
   var modes: Modes
   
   init(map: [String: Any]) {
+    self.created_at = map["created_at"] as! String
     self.modes = Modes(map: map["modes"] as! [String: Any]) 
   }
   

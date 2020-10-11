@@ -9,12 +9,12 @@ struct Modes: Codable {
   
   init(map: [String: Any]) {
     self.tile_1 = Mode(map: map["tile_1"] as! [String: Any])
-    self.tile_2 = Mode(map: map["tile_1"] as! [String: Any])
-    self.tile_3 = Mode(map: map["tile_1"] as! [String: Any])
-    self.tile_4 = Mode(map: map["tile_1"] as! [String: Any])
-    self.tile_5 = Mode(map: map["tile_1"] as! [String: Any])
-    self.tile_6 = Mode(map: map["tile_1"] as! [String: Any])
-    self.tile_7 = Mode(map: map["tile_1"] as! [String: Any])
+    self.tile_2 = Mode(map: map["tile_2"] as! [String: Any])
+    self.tile_3 = Mode(map: map["tile_3"] as! [String: Any])
+    self.tile_4 = Mode(map: map["tile_4"] as! [String: Any])
+    self.tile_5 = Mode(map: map["tile_5"] as! [String: Any])
+    self.tile_6 = Mode(map: map["tile_6"] as! [String: Any])
+    self.tile_7 = Mode(map: map["tile_7"] as! [String: Any])
   }
   
   func toDict() -> [String: Any] {

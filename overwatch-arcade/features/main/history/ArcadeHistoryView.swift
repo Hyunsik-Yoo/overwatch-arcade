@@ -10,46 +10,27 @@ import SwiftUI
 
 struct ArcadeHistoryView: View {
   
-  @ObservedObject var viewModel = ArcadeHistoryViewModel(overwatchService: OverwatchService())
+  @Binding var arcades: [Arcade]
   
-  init() {
+  init(arcades: Binding<[Arcade]>) {
+    self._arcades = arcades
     UITableView.appearance().backgroundColor = UIColor(r: 28, g: 30, b: 31)
     UITableView.appearance().tableFooterView = UIView()
   }
   
   var body: some View {
-    if let arcades = self.viewModel.arcades {
-      List(arcades, id: \.created_at) { arcade in
+    List {
+      ForEach(self.arcades, id: \.created_at){ arcade in
         ArcadeHistoryCell(arcade: arcade)
           .listRowInsets(.init())
-      }
-      .onAppear {
-        self.viewModel.fetchArcadeHistory()
-      }
-    } else {
-      List {
-        ArcadeHistoryCell()
-          .listRowInsets(.init())
-        ArcadeHistoryCell()
-          .listRowInsets(.init())
-        ArcadeHistoryCell()
-          .listRowInsets(.init())
-        ArcadeHistoryCell()
-          .listRowInsets(.init())
-        ArcadeHistoryCell()
-          .listRowInsets(.init())
-        ArcadeHistoryCell()
-          .listRowInsets(.init())
-      }
-      .onAppear {
-        self.viewModel.fetchArcadeHistory()
+          .animation(nil)
       }
     }
   }
 }
 
-struct ArcadeHistoryView_Previews: PreviewProvider {
-  static var previews: some View {
-    ArcadeHistoryView()
-  }
-}
+//struct ArcadeHistoryView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ArcadeHistoryView()
+//  }
+//}
