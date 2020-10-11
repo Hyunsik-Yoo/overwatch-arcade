@@ -25,9 +25,11 @@ struct HistoryView: View {
         .edgesIgnoringSafeArea(.all)
       
       VStack(alignment: .leading, spacing: 0) {
-        HStack(alignment: .center, spacing: 0) {
-          Button("뒤로가기") {
+        HStack(alignment: .top, spacing: 0) {
+          Button {
             self.presentationMode.wrappedValue.dismiss()
+          } label: {
+            Image("ic_back")
           }
           .padding(.leading, 24 * RatioUtils.widthRatio)
           .padding(.top, 16 * RatioUtils.heightRatio)
@@ -36,6 +38,7 @@ struct HistoryView: View {
           Text("History")
             .font(Font.custom("koverwatch", size: 24 * RatioUtils.widthRatio))
             .foregroundColor(.white)
+            .padding(.top, 16 * RatioUtils.heightRatio)
             .padding(.leading, 16 * RatioUtils.widthRatio)
           
           Spacer()
