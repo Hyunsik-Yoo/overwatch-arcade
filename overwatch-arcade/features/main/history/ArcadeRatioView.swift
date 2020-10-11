@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ArcadeRatioView: View {
   
-  init() {
+  @Binding var ratios: [String]
+  
+  init(ratios: Binding<[String]>) {
+    self._ratios = ratios
     UITableView.appearance().backgroundColor = UIColor(r: 28, g: 30, b: 31)
     UITableView.appearance().tableFooterView = UIView()
     
@@ -18,22 +21,16 @@ struct ArcadeRatioView: View {
   
   var body: some View {
     List {
-      ArcadeRatioCell()
-        .listRowInsets(.init())
-      ArcadeRatioCell()
-        .listRowInsets(.init())
-      ArcadeRatioCell()
-        .listRowInsets(.init())
-      ArcadeRatioCell()
-        .listRowInsets(.init())
-      ArcadeRatioCell()
-        .listRowInsets(.init())
+      ForEach(self.ratios, id: \.self) { ratio in
+        ArcadeRatioCell()
+          .listRowInsets(.init())
+      }
     }
   }
 }
 
-struct ArcadeRatioView_Previews: PreviewProvider {
-  static var previews: some View {
-    ArcadeRatioView()
-  }
-}
+//struct ArcadeRatioView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ArcadeRatioView()
+//  }
+//}

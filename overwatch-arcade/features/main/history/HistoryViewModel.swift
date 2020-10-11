@@ -20,12 +20,14 @@ class HistoryViewModel: ObservableObject {
   
   
   func fetchArcadeHistory() {
-//    self.overwatchService.getArcadeHistory().sink { completion in
-//
-//    } receiveValue: { arcades in
-//      self.arcades = arcades
-//    }.store(in: &setCancellable)
-    
+    self.overwatchService.getArcadeHistory().sink { completion in
+
+    } receiveValue: { arcades in
+      self.arcades = arcades
+    }.store(in: &setCancellable)
+  }
+  
+  func fetchRatio() {
     test = ["1","2","3","4"]
   }
 }

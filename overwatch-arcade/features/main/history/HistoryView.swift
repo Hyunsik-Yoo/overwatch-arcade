@@ -84,7 +84,7 @@ struct HistoryView: View {
         
         GeometryReader { geo in
           HStack(spacing: 0) {
-            ArcadeRatioView()
+            ArcadeRatioView(ratios: self.$viewModel.test)
               .frame(width: geo.frame(in: .global).width)
             ArcadeHistoryView(arcades: self.$viewModel.arcades)
               .frame(width: geo.frame(in: .global).width)
@@ -107,6 +107,7 @@ struct HistoryView: View {
     .navigationBarHidden(true)
     .onAppear {
       self.viewModel.fetchArcadeHistory()
+      self.viewModel.fetchRatio()
     }
   }
   
