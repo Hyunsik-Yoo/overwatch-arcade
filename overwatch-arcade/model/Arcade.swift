@@ -4,7 +4,7 @@ struct Arcade: Codable {
   var modes: Modes
   
   init(map: [String: Any]) {
-    self.created_at = map["created_at"] as! String
+    self.created_at = map["created_at"] as? String ?? ""
     self.modes = Modes(map: map["modes"] as! [String: Any]) 
   }
   
