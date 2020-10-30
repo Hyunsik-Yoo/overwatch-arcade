@@ -7,7 +7,7 @@ struct ModeCell: View {
   
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
-      ZStack(alignment: .init(horizontal: .leading, vertical: .bottom)) {
+      ZStack(alignment: .init(horizontal: .leading, vertical: .top)) {
         if let urlString = mode?.image {
           KFImage(URL(string: urlString)!)
             .resizable()
