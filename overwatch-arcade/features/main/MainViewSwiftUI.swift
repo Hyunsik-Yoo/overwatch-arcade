@@ -3,7 +3,7 @@ import Alamofire
 import struct Kingfisher.KFImage
 
 
-struct MainView: View {
+struct MainViewSwiftUI: View {
   @ObservedObject var viewModel = MainViewModel(overwatchService: OverwatchService())
   
   var body: some View {
@@ -95,6 +95,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    MainView()
+    MainViewSwiftUI()
   }
 }

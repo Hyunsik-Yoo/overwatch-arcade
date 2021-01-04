@@ -14,7 +14,7 @@ struct OverwatchService: OverwatchServiceProtocol {
     return Future { promise in
       let urlString = "https://overwatcharcade.today/api/overwatch/today"
 
-      Alamofire.request(urlString, method: .get).responseJSON { response in
+      AF.request(urlString, method: .get).responseJSON { response in
         if let value = response.value {
           let arcade: Arcade = JsonUtils.toJson(object: value)!
           

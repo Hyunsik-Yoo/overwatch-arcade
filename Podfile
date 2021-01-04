@@ -6,10 +6,16 @@ target 'overwatch-arcade' do
   use_frameworks!
   
   # Pods for overwatch-arcade
-  pod 'Alamofire', '~> 4.9.1'
-  pod 'AlamofireNetworkActivityLogger', '~> 2.4'
+  pod 'Alamofire', '~> 5.2'
   pod 'Kingfisher/SwiftUI'
   pod 'Kingfisher'
+  
+  pod 'SnapKit', '~> 5.0.0'
+
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+
+  pod 'Then'
   
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
@@ -20,8 +26,7 @@ end
 target 'arcard-widgetExtension' do
   use_frameworks!
   
-  pod 'Alamofire', '~> 4.9.1'
-  pod 'AlamofireNetworkActivityLogger', '~> 2.4'
+  pod 'Alamofire', '~> 5.2'
   pod 'Kingfisher'
   pod 'Kingfisher/SwiftUI'
   

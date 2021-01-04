@@ -48,7 +48,8 @@ struct Provider: IntentTimelineProvider {
   private func getArcadeInfo(completion: @escaping ((Bool) -> Void)) {
     let urlString = "https://overwatcharcade.today/api/overwatch/today"
     
-    Alamofire.request(urlString, method: .get).responseJSON { response in
+    
+    AF.request(urlString, method: .get).responseJSON { response in
       if let value = response.value {
         let arcade: Arcade = JsonUtils.toJson(object: value)!
         let isTotalMayhemToday = arcade.getModes().contains { $0.id == 62 }
