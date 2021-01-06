@@ -9,7 +9,7 @@
 import SwiftUI
 import struct Kingfisher.KFImage
 
-struct ModeView: View {
+struct ModeViewSwiftUI: View {
   @Binding var mode: Mode?
   
   var body: some View {

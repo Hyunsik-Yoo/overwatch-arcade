@@ -77,12 +77,15 @@ class MainView: BaseView {
     $0.backgroundColor = .red
   }
   
+  let arcadeTypeContainer = UIView().then {
+    $0.layer.cornerRadius = 34
+    $0.layer.masksToBounds = true
+    $0.backgroundColor = UIColor(r: 249, g: 95, b: 95)
+  }
+  
   let arcadeTypeLabel1 = UILabel().then {
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 12)
-    $0.backgroundColor = UIColor(r: 249, g: 95, b: 95)
-    $0.layer.cornerRadius = 34
-    $0.layer.masksToBounds = true
     $0.text = "3 v 3"
   }
   
@@ -92,18 +95,26 @@ class MainView: BaseView {
     $0.text = "섬멸전 경쟁전"
   }
   
-  let arcadeImage2 = UIImageView().then {
-    $0.layer.cornerRadius = 6
-    $0.layer.masksToBounds = true
-    $0.backgroundColor = .red
-  }
+  let modeView2 = ModeView()
+  
+  let modeView3 = ModeView()
+  
+  let modeView4 = ModeView()
+  
+  let modeView5 = ModeView()
+  
+  let modeView6 = ModeView()
+  
+  let modeView7 = ModeView()
   
   
   override func setup() {
     containerView.addSubViews(
       mayhemImage, dateLabel, titleLabel, ratioContainerView,
       ratioTitleLabel, ratioDescLabel, ratioValueLabel, todayLabel,
-      remainTimeLabel, arcadeImage1, arcadeTypeLabel1, arcadeLabel1
+      remainTimeLabel, arcadeImage1, arcadeTypeContainer, arcadeTypeLabel1,
+      arcadeLabel1, modeView2, modeView3, modeView4,
+      modeView5, modeView6, modeView7
     )
     scrollView.addSubview(containerView)
     addSubViews(backgroundImage, historyButton, scrollView)
@@ -125,16 +136,9 @@ class MainView: BaseView {
       make.top.equalTo(self.historyButton.snp.bottom).offset(10)
     }
     
-    self.containerView.snp.makeConstraints { make in
-      make.edges.equalTo(self.scrollView)
-      make.width.equalTo(UIScreen.main.bounds.width)
-      make.top.equalToSuperview()
-      make.bottom.equalTo(titleLabel.snp.bottom)
-    }
-    
     self.mayhemImage.snp.makeConstraints { make in
       make.left.equalToSuperview().offset(24)
-      make.top.equalTo(self.historyButton.snp.bottom).offset(63)
+      make.top.equalToSuperview().offset(80)
       make.width.height.equalTo(108 * RatioUtils.widthRatio)
     }
     
@@ -188,7 +192,7 @@ class MainView: BaseView {
     }
     
     self.arcadeTypeLabel1.snp.makeConstraints { make in
-      make.left.equalTo(self.arcadeImage1).offset(4)
+      make.left.equalTo(self.arcadeImage1).offset(14)
       make.centerY.equalTo(self.arcadeImage1.snp.bottom)
     }
     
@@ -196,6 +200,54 @@ class MainView: BaseView {
       make.left.equalToSuperview().offset(28)
       make.right.equalToSuperview().offset(-28)
       make.top.equalTo(self.arcadeImage1.snp.bottom).offset(18)
+    }
+    
+    self.modeView2.snp.makeConstraints { make in
+      make.left.equalToSuperview().offset(24)
+      make.right.equalTo(self.snp.centerX).offset(-7.5)
+      make.top.equalTo(self.arcadeLabel1.snp.bottom).offset(24)
+    }
+    
+    self.modeView3.snp.makeConstraints { make in
+      make.right.equalToSuperview().offset(-24)
+      make.left.equalTo(self.snp.centerX).offset(7.5)
+      make.top.equalTo(self.arcadeLabel1.snp.bottom).offset(24)
+    }
+    
+    self.modeView4.snp.makeConstraints { make in
+      make.left.right.equalTo(self.modeView2)
+      make.top.equalTo(self.modeView2.snp.bottom).offset(24)
+    }
+    
+    self.modeView5.snp.makeConstraints { make in
+      make.left.right.equalTo(self.modeView3)
+      make.top.equalTo(self.modeView3.snp.bottom).offset(24)
+    }
+    
+    self.modeView6.snp.makeConstraints { make in
+      make.left.right.equalTo(self.modeView4)
+      make.top.equalTo(self.modeView4.snp.bottom).offset(24)
+    }
+    
+    self.modeView7.snp.makeConstraints { make in
+      make.left.right.equalTo(self.modeView5)
+      make.top.equalTo(self.modeView5.snp.bottom).offset(24)
+    }
+    
+    self.containerView.snp.makeConstraints { make in
+      make.edges.equalTo(self.scrollView)
+      make.width.equalTo(UIScreen.main.bounds.width)
+      make.top.equalToSuperview()
+      make.bottom.equalTo(self.modeView7)
+      make.height.equalTo(1000)
+    }
+    
+    // 텍스트 바인딩 이후에 고고
+    self.arcadeTypeContainer.snp.makeConstraints { make in
+      make.left.equalTo(self.arcadeTypeLabel1).offset(-10)
+      make.top.equalTo(self.arcadeTypeLabel1).offset(-4)
+      make.bottom.equalTo(self.arcadeTypeLabel1).offset(4)
+      make.right.equalTo(self.arcadeTypeLabel1).offset(10)
     }
   }
 }
