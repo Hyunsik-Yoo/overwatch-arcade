@@ -6,7 +6,7 @@ class MainView: BaseView {
   
   let backgroundImage = UIImageView().then {
     $0.image = UIImage(named: "img_background")
-    $0.contentMode = .scaleAspectFill
+    $0.contentMode = .center
   }
   
   let historyButton = UIButton().then {
@@ -73,7 +73,7 @@ class MainView: BaseView {
   let arcadeImage1 = UIImageView().then {
     $0.layer.cornerRadius = 6
     $0.layer.masksToBounds = true
-    $0.backgroundColor = .red
+    $0.contentMode = .top
   }
   
   let arcadeTypeContainer = UIView().then {
@@ -293,7 +293,7 @@ class MainView: BaseView {
     KingfisherManager.shared.retrieveImage(with: url) { result in
       switch result {
       case .success(let imageResult):
-        let newSize = self.resizeImageByWidth(image: imageResult.image, newWidth: self.bounds.width)
+        let newSize = self.resizeImageByWidth(image: imageResult.image, newWidth: UIScreen.main.bounds.width - 48)
         
         self.arcadeImage1.image = imageResult.image.resize(targetSize: newSize)
         
