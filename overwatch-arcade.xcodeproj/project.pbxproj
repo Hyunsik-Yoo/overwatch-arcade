@@ -70,6 +70,7 @@
 		6ED8D68E2500C2B200B85CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */; };
 		6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6972500C94400B85CDC /* Arcade.swift */; };
 		6ED8D69A2500C9B700B85CDC /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6992500C9B700B85CDC /* JsonUtils.swift */; };
+		6EF4904625A74CF50052BF12 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4904525A74CF50052BF12 /* UIImageExtension.swift */; };
 		6EFE519725A576AA00DB71DF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE519625A576AA00DB71DF /* UIImageViewExtension.swift */; };
 		75E94BEFBC769533AC1A2FD1 /* Pods_arcard_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2066F8F1AC569FEDED6E220 /* Pods_arcard_widgetExtension.framework */; };
 /* End PBXBuildFile section */
@@ -162,6 +163,7 @@
 		6ED8D68F2500C2B200B85CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED8D6972500C94400B85CDC /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
 		6ED8D6992500C9B700B85CDC /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		6EF4904525A74CF50052BF12 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		6EFE519625A576AA00DB71DF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		9574A1B83632B0EDD1432FF0 /* Pods-arcard-widgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcard-widgetExtension.release.xcconfig"; path = "Target Support Files/Pods-arcard-widgetExtension/Pods-arcard-widgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		A34F335484AD7F1ADA360B40 /* Pods-overwatch-widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-widget.release.xcconfig"; path = "Target Support Files/Pods-overwatch-widget/Pods-overwatch-widget.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				6E3422CB25A34EBC00552502 /* StringExtension.swift */,
 				6E3422D125A34ED300552502 /* UIViewExtnesion.swift */,
 				6EFE519625A576AA00DB71DF /* UIImageViewExtension.swift */,
+				6EF4904525A74CF50052BF12 /* UIImageExtension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				6E34231725A353DB00552502 /* MainView.swift in Sources */,
 				6EAA8CC425036399004274EB /* Modes.swift in Sources */,
 				6E0375E225248B0B00C64563 /* RatioUtils.swift in Sources */,
+				6EF4904625A74CF50052BF12 /* UIImageExtension.swift in Sources */,
 				6EBB34292524C3E40038B28A /* ModeCell.swift in Sources */,
 				6E73A07E25303B84001C1E7A /* ArcadeRatioCell.swift in Sources */,
 				6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */,

@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class ModeView: BaseView {
   
@@ -6,10 +7,11 @@ class ModeView: BaseView {
     $0.backgroundColor = .red
     $0.layer.cornerRadius = 6
     $0.layer.masksToBounds = true
+    $0.contentMode = .top
   }
   
   let typeContainerView = UIView().then {
-    $0.layer.cornerRadius = 34
+    $0.layer.cornerRadius = 10
     $0.layer.masksToBounds = true
     $0.backgroundColor = UIColor(r: 249, g: 95, b: 95)
   }
@@ -22,6 +24,7 @@ class ModeView: BaseView {
   
   let nameLabel = UILabel().then {
     $0.textColor = .white
+    $0.numberOfLines = 0
     $0.font = UIFont(name: "koverwatch", size: 20)
     $0.text = "섬멸전 경쟁전"
   }
@@ -52,12 +55,6 @@ class ModeView: BaseView {
       make.left.right.top.equalTo(self.modeImage)
       make.bottom.equalTo(self.nameLabel)
     }
-  }
-  
-  func bind(mode: Mode) {
-    self.modeImage.setImage(urlString: mode.image)
-    self.typeLabel.text = mode.players
-    self.nameLabel.text = mode.name
     
     self.typeContainerView.snp.makeConstraints { make in
       make.left.equalTo(self.typeLabel).offset(-10)
@@ -65,5 +62,33 @@ class ModeView: BaseView {
       make.bottom.equalTo(self.typeLabel).offset(4)
       make.right.equalTo(self.typeLabel).offset(10)
     }
+  }
+  
+  func bind(mode: Mode) {
+    self.setImage(url: mode.image)
+    self.typeLabel.text = mode.players
+    self.nameLabel.text = mode.name
+  }
+  
+  private func setImage(url: String) {
+    guard let url = URL(string: url) else { return }
+    KingfisherManager.shared.retrieveImage(with: url) { result in
+      switch result {
+      case .success(let imageResult):
+        let newSize = self.resizeImageByWidth(image: imageResult.image, newWidth: self.bounds.width)
+        
+        self.modeImage.image = imageResult.image.resize(targetSize: newSize)
+        
+      case .failure( _):
+        break
+      }
+    }
+  }
+  
+  private func resizeImageByWidth(image: UIImage, newWidth: CGFloat) -> CGSize {
+    let scale = newWidth / image.size.width
+    let newHeight = image.size.height * scale
+    
+    return CGSize(width: newWidth, height: newHeight)
   }
 }

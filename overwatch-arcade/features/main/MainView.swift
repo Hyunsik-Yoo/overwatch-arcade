@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import Kingfisher
 
 class MainView: BaseView {
   
@@ -23,14 +24,12 @@ class MainView: BaseView {
   }
   
   let dateLabel = UILabel().then {
-    $0.text = "2020. 09.30"
     $0.font = UIFont(name: "koverwatch", size: 20)
     $0.textColor = .white
   }
   
   let titleLabel = UILabel().then {
     $0.numberOfLines = 0
-    $0.text = "main_title_is_not_mayhem".localized
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 36)
   }
@@ -78,7 +77,7 @@ class MainView: BaseView {
   }
   
   let arcadeTypeContainer = UIView().then {
-    $0.layer.cornerRadius = 34
+    $0.layer.cornerRadius = 10
     $0.layer.masksToBounds = true
     $0.backgroundColor = UIColor(r: 249, g: 95, b: 95)
   }
@@ -241,7 +240,6 @@ class MainView: BaseView {
       make.bottom.equalTo(self.modeView7).offset(24)
     }
     
-    // 텍스트 바인딩 이후에 고고
     self.arcadeTypeContainer.snp.makeConstraints { make in
       make.left.equalTo(self.arcadeTypeLabel1).offset(-10)
       make.top.equalTo(self.arcadeTypeLabel1).offset(-4)
@@ -251,10 +249,64 @@ class MainView: BaseView {
   }
   
   func setMayhem(isMayhemToday: Bool) {
-    
+    if isMayhemToday {
+      self.mayhemImage.alpha = 1.0
+      self.setMayhemTitle()
+      self.startOpacityAnimation()
+    } else {
+      self.mayhemImage.alpha = 0.5
+      self.titleLabel.text = "main_title_is_not_mayhem".localized
+    }
   }
   
   func bindArcade(arcade: Arcade) {
+    self.setImage(url: arcade.modes.tile_1.image)
+    self.arcadeTypeLabel1.text = arcade.modes.tile_1.players
+    self.arcadeLabel1.text = arcade.modes.tile_1.name
     
+    self.modeView2.bind(mode: arcade.modes.tile_2)
+    self.modeView3.bind(mode: arcade.modes.tile_3)
+    self.modeView4.bind(mode: arcade.modes.tile_4)
+    self.modeView5.bind(mode: arcade.modes.tile_5)
+    self.modeView6.bind(mode: arcade.modes.tile_6)
+    self.modeView7.bind(mode: arcade.modes.tile_7)
+  }
+  
+  private func setMayhemTitle() {
+    let attributedText = NSMutableAttributedString(string: "main_title_is_mayhem".localized)
+    let range = attributedText.mutableString.range(of: "난장판", options: .caseInsensitive)
+    
+    if range.location != NSNotFound {
+      attributedText.addAttribute(.foregroundColor, value: UIColor.yellow, range: range)
+    }
+    self.titleLabel.attributedText = attributedText
+  }
+  
+  private func startOpacityAnimation() {
+    UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat]) {
+      self.mayhemImage.alpha = 0
+    } completion: { _ in }
+  }
+  
+  private func setImage(url: String) {
+    guard let url = URL(string: url) else { return }
+    KingfisherManager.shared.retrieveImage(with: url) { result in
+      switch result {
+      case .success(let imageResult):
+        let newSize = self.resizeImageByWidth(image: imageResult.image, newWidth: self.bounds.width)
+        
+        self.arcadeImage1.image = imageResult.image.resize(targetSize: newSize)
+        
+      case .failure( _):
+        break
+      }
+    }
+  }
+  
+  private func resizeImageByWidth(image: UIImage, newWidth: CGFloat) -> CGSize {
+    let scale = newWidth / image.size.width
+    let newHeight = image.size.height * scale
+    
+    return CGSize(width: newWidth, height: newHeight)
   }
 }
