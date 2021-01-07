@@ -211,35 +211,34 @@ class MainView: BaseView {
     self.modeView3.snp.makeConstraints { make in
       make.right.equalToSuperview().offset(-24)
       make.left.equalTo(self.snp.centerX).offset(7.5)
-      make.top.equalTo(self.arcadeLabel1.snp.bottom).offset(24)
+      make.top.bottom.equalTo(self.modeView2)
     }
-    
+
     self.modeView4.snp.makeConstraints { make in
       make.left.right.equalTo(self.modeView2)
       make.top.equalTo(self.modeView2.snp.bottom).offset(24)
     }
-    
+
     self.modeView5.snp.makeConstraints { make in
       make.left.right.equalTo(self.modeView3)
-      make.top.equalTo(self.modeView3.snp.bottom).offset(24)
+      make.top.bottom.equalTo(self.modeView4)
     }
-    
+
     self.modeView6.snp.makeConstraints { make in
       make.left.right.equalTo(self.modeView4)
       make.top.equalTo(self.modeView4.snp.bottom).offset(24)
     }
-    
+
     self.modeView7.snp.makeConstraints { make in
       make.left.right.equalTo(self.modeView5)
-      make.top.equalTo(self.modeView5.snp.bottom).offset(24)
+      make.top.bottom.equalTo(self.modeView6)
     }
     
     self.containerView.snp.makeConstraints { make in
       make.edges.equalTo(self.scrollView)
       make.width.equalTo(UIScreen.main.bounds.width)
       make.top.equalToSuperview()
-      make.bottom.equalTo(self.modeView7)
-      make.height.equalTo(1000)
+      make.bottom.equalTo(self.modeView7).offset(24)
     }
     
     // 텍스트 바인딩 이후에 고고

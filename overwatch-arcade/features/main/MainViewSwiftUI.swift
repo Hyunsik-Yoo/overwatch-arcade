@@ -4,7 +4,7 @@ import struct Kingfisher.KFImage
 
 
 struct MainViewSwiftUI: View {
-  @ObservedObject var viewModel = MainViewModel(overwatchService: OverwatchService())
+  @ObservedObject var viewModel = MainViewModelSwiftUI(overwatchService: OverwatchService())
   
   var body: some View {
     NavigationView {

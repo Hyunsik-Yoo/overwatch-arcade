@@ -2,7 +2,7 @@ import Combine
 import SwiftUI
 import FirebaseFirestore
 
-class MainViewModel: ObservableObject {
+class MainViewModelSwiftUI: ObservableObject {
   
   @Published var predictedValue = 0
   @Published var iconOpacity = 1.0

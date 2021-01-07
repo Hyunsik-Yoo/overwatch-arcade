@@ -59,7 +59,7 @@
 		6EAA8CC6250363A5004274EB /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC5250363A5004274EB /* Mode.swift */; };
 		6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC8250363ED004274EB /* OverwatchService.swift */; };
 		6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCA250377EC004274EB /* CommonError.swift */; };
-		6EAA8CCF25037921004274EB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCE25037921004274EB /* MainViewModel.swift */; };
+		6EAA8CCF25037921004274EB /* MainViewModelSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCE25037921004274EB /* MainViewModelSwiftUI.swift */; };
 		6EBB34292524C3E40038B28A /* ModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB34282524C3E40038B28A /* ModeCell.swift */; };
 		6ED8D6822500C2B000B85CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6812500C2B000B85CDC /* AppDelegate.swift */; };
 		6ED8D6842500C2B000B85CDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6832500C2B000B85CDC /* SceneDelegate.swift */; };
@@ -148,7 +148,7 @@
 		6EAA8CC5250363A5004274EB /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		6EAA8CC8250363ED004274EB /* OverwatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchService.swift; sourceTree = "<group>"; };
 		6EAA8CCA250377EC004274EB /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
-		6EAA8CCE25037921004274EB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6EAA8CCE25037921004274EB /* MainViewModelSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelSwiftUI.swift; sourceTree = "<group>"; };
 		6EBB34282524C3E40038B28A /* ModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCell.swift; sourceTree = "<group>"; };
 		6ED8D67E2500C2B000B85CDC /* overwatch-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "overwatch-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED8D6812500C2B000B85CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 				6E26C002252614A40044B0A9 /* history */,
 				6EBB342C2524C80D0038B28A /* subview */,
 				6ED8D6852500C2B000B85CDC /* MainViewSwiftUI.swift */,
-				6EAA8CCE25037921004274EB /* MainViewModel.swift */,
+				6EAA8CCE25037921004274EB /* MainViewModelSwiftUI.swift */,
 				6E34231625A353DB00552502 /* MainView.swift */,
 				6E34231A25A354CF00552502 /* MainVC.swift */,
 				6E76B5EA25A5745C0038650B /* ModeView.swift */,
@@ -642,7 +642,7 @@
 				6E3422D225A34ED300552502 /* UIViewExtnesion.swift in Sources */,
 				6EA025752503C801004B4FC4 /* ModeViewSwiftUI.swift in Sources */,
 				6E3422E525A34FC000552502 /* NetworkActivityLogger.swift in Sources */,
-				6EAA8CCF25037921004274EB /* MainViewModel.swift in Sources */,
+				6EAA8CCF25037921004274EB /* MainViewModelSwiftUI.swift in Sources */,
 				6EA025772503CC83004B4FC4 /* Data.swift in Sources */,
 				6E3422E925A34FDB00552502 /* BaseTableViewCell.swift in Sources */,
 				6E3422E125A34F4900552502 /* AlertUtils.swift in Sources */,

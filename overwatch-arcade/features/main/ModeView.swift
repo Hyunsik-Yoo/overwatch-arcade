@@ -46,7 +46,11 @@ class ModeView: BaseView {
       make.left.equalTo(self.modeImage).offset(4)
       make.right.equalTo(self.modeImage)
       make.top.equalTo(self.typeLabel.snp.bottom).offset(12)
-      make.bottom.equalToSuperview()
+    }
+    
+    self.snp.makeConstraints { make in
+      make.left.right.top.equalTo(self.modeImage)
+      make.bottom.equalTo(self.nameLabel)
     }
   }
   
