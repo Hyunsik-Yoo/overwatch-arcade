@@ -249,4 +249,12 @@ class MainView: BaseView {
       make.right.equalTo(self.arcadeTypeLabel1).offset(10)
     }
   }
+  
+  func setMayhem(isMayhemToday: Bool) {
+    
+  }
+  
+  func bindArcade(arcade: Arcade) {
+    
+  }
 }
