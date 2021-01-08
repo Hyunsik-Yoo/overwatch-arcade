@@ -28,7 +28,7 @@ class MainViewModel: BaseViewModel {
   func fetchArcades() {
     self.overwatchService.fetchArcade().subscribe(
       onNext: { arcade in
-        let isMayhemToday = arcade.getModes().contains { $0.id == 62 }
+        let isMayhemToday = arcade.getModes().contains { $0.id == 71 }
         
         self.output.isMayhemToday.accept(isMayhemToday)
         self.output.arcades.accept(arcade)

@@ -6,7 +6,7 @@ class MainView: BaseView {
   
   let backgroundImage = UIImageView().then {
     $0.image = UIImage(named: "img_background")
-    $0.contentMode = .center
+    $0.contentMode = .scaleAspectFill
   }
   
   let historyButton = UIButton().then {
@@ -251,11 +251,11 @@ class MainView: BaseView {
   func setMayhem(isMayhemToday: Bool) {
     if isMayhemToday {
       self.mayhemImage.alpha = 1.0
-      self.setMayhemTitle()
+      self.setMayhemTodayTitle()
       self.startOpacityAnimation()
     } else {
       self.mayhemImage.alpha = 0.5
-      self.titleLabel.text = "main_title_is_not_mayhem".localized
+      self.setMayhemNotTodayTitle()
     }
   }
   
@@ -272,13 +272,29 @@ class MainView: BaseView {
     self.modeView7.bind(mode: arcade.modes.tile_7)
   }
   
-  private func setMayhemTitle() {
+  private func setMayhemTodayTitle() {
     let attributedText = NSMutableAttributedString(string: "main_title_is_mayhem".localized)
     let range = attributedText.mutableString.range(of: "난장판", options: .caseInsensitive)
+    let paragraphStyle = NSMutableParagraphStyle()
+    
+    paragraphStyle.lineSpacing = 10
+    paragraphStyle.lineBreakMode = .byTruncatingTail
     
     if range.location != NSNotFound {
       attributedText.addAttribute(.foregroundColor, value: UIColor.yellow, range: range)
+      attributedText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
     }
+    self.titleLabel.attributedText = attributedText
+  }
+  
+  private func setMayhemNotTodayTitle() {
+    let attributedText = NSMutableAttributedString(string: "main_title_is_not_mayhem".localized)
+    let paragraphStyle = NSMutableParagraphStyle()
+    
+    paragraphStyle.lineSpacing = 10
+    paragraphStyle.lineBreakMode = .byTruncatingTail
+    
+    attributedText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
     self.titleLabel.attributedText = attributedText
   }
   
