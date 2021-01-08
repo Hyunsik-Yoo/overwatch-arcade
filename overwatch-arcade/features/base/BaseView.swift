@@ -2,6 +2,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import Then
+import SkeletonView
 
 class BaseView: UIView {
   

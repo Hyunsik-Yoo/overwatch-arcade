@@ -4,6 +4,7 @@ import Kingfisher
 class ModeView: BaseView {
   
   let modeImage = UIImageView().then {
+    $0.isSkeletonable = true
     $0.backgroundColor = .red
     $0.layer.cornerRadius = 6
     $0.layer.masksToBounds = true
@@ -23,6 +24,7 @@ class ModeView: BaseView {
   }
   
   let nameLabel = UILabel().then {
+    $0.isSkeletonable = true
     $0.textColor = .white
     $0.numberOfLines = 0
     $0.font = UIFont(name: "koverwatch", size: 20)
@@ -30,6 +32,7 @@ class ModeView: BaseView {
   }
   
   override func setup() {
+    self.isSkeletonable = true
     backgroundColor = .clear
     addSubViews(modeImage, typeContainerView, typeLabel, nameLabel)
   }
@@ -82,6 +85,7 @@ class ModeView: BaseView {
       case .failure( _):
         break
       }
+      self.stopSkeletonAnimation()
     }
   }
   

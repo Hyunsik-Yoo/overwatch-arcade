@@ -17,6 +17,8 @@ target 'overwatch-arcade' do
 
   pod 'Then'
   
+  pod 'SkeletonView'
+  
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'

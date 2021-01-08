@@ -15,9 +15,12 @@ class MainView: BaseView {
   
   let scrollView = UIScrollView().then {
     $0.showsVerticalScrollIndicator = false
+    $0.isSkeletonable = true
   }
   
-  let containerView = UIView()
+  let containerView = UIView().then {
+    $0.isSkeletonable = true
+  }
   
   let mayhemImage = UIImageView().then {
     $0.image = UIImage(named: "img_mayhem")
@@ -29,6 +32,8 @@ class MainView: BaseView {
   }
   
   let titleLabel = UILabel().then {
+    $0.isSkeletonable = true
+    $0.linesCornerRadius = 6
     $0.numberOfLines = 0
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 36)
@@ -74,6 +79,9 @@ class MainView: BaseView {
     $0.layer.cornerRadius = 6
     $0.layer.masksToBounds = true
     $0.contentMode = .top
+    $0.backgroundColor = .gray
+    $0.isSkeletonable = true
+    $0.showAnimatedGradientSkeleton()
   }
   
   let arcadeTypeContainer = UIView().then {
@@ -89,6 +97,7 @@ class MainView: BaseView {
   }
   
   let arcadeLabel1 = UILabel().then {
+    $0.isSkeletonable = true
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 20)
     $0.text = "섬멸전 경쟁전"
@@ -108,6 +117,7 @@ class MainView: BaseView {
   
   
   override func setup() {
+    isSkeletonable = true
     containerView.addSubViews(
       mayhemImage, dateLabel, titleLabel, ratioContainerView,
       ratioTitleLabel, ratioDescLabel, ratioValueLabel, todayLabel,
@@ -117,6 +127,7 @@ class MainView: BaseView {
     )
     scrollView.addSubview(containerView)
     addSubViews(backgroundImage, historyButton, scrollView)
+    self.showAnimatedGradientSkeleton()
   }
   
   override func bindConstraints() {
@@ -285,6 +296,7 @@ class MainView: BaseView {
       attributedText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
     }
     self.titleLabel.attributedText = attributedText
+    self.titleLabel.stopSkeletonAnimation()
   }
   
   private func setMayhemNotTodayTitle() {
