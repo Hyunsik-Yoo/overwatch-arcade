@@ -13,7 +13,6 @@
 		6E0375D825247CDA00C64563 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0375D725247CDA00C64563 /* ColorExtension.swift */; };
 		6E0375E225248B0B00C64563 /* RatioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0375E125248B0B00C64563 /* RatioUtils.swift */; };
 		6E10DBB025A4AD3F006B25B2 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E10DBAF25A4AD3F006B25B2 /* Localization.strings */; };
-		6E26C004252614B20044B0A9 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E26C003252614B20044B0A9 /* HistoryView.swift */; };
 		6E3422CC25A34EBC00552502 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3422CB25A34EBC00552502 /* StringExtension.swift */; };
 		6E3422D225A34ED300552502 /* UIViewExtnesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3422D125A34ED300552502 /* UIViewExtnesion.swift */; };
 		6E3422D725A34F0100552502 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3422D625A34F0100552502 /* BaseView.swift */; };
@@ -29,10 +28,6 @@
 		6E3725DD25206D100095D7FB /* ArcadeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3725D725206BAD0095D7FB /* ArcadeEntry.swift */; };
 		6E3725E625206DAD0095D7FB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3725E225206D840095D7FB /* Provider.swift */; };
 		6E3725F525206DF00095D7FB /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3725F125206DD80095D7FB /* WidgetView.swift */; };
-		6E73A07A25303B0C001C1E7A /* ArcadeRatioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E73A07925303B0C001C1E7A /* ArcadeRatioView.swift */; };
-		6E73A07E25303B84001C1E7A /* ArcadeRatioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E73A07D25303B84001C1E7A /* ArcadeRatioCell.swift */; };
-		6E73A08625304D9F001C1E7A /* ArcadeHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E73A08525304D9F001C1E7A /* ArcadeHistoryView.swift */; };
-		6E73A08A25304DC2001C1E7A /* ArcadeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E73A08925304DC2001C1E7A /* ArcadeHistoryCell.swift */; };
 		6E73A0AD2530557F001C1E7A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E73A0AC2530557F001C1E7A /* DateUtils.swift */; };
 		6E73A0B125305917001C1E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E73A0B025305917001C1E7A /* GoogleService-Info.plist */; };
 		6E76B5EB25A5745C0038650B /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E76B5EA25A5745C0038650B /* ModeView.swift */; };
@@ -51,7 +46,6 @@
 		6E92C0CE25178978009E5E48 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC5250363A5004274EB /* Mode.swift */; };
 		6EA025772503CC83004B4FC4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA025762503CC83004B4FC4 /* Data.swift */; };
 		6EA0257A2503CD57004B4FC4 /* Arcade.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6EA025792503CD57004B4FC4 /* Arcade.geojson */; };
-		6EA9255C2530775A0046F419 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9255B2530775A0046F419 /* HistoryViewModel.swift */; };
 		6EAA8CC025036151004274EB /* koverwatch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA8CBF25036150004274EB /* koverwatch.ttf */; };
 		6EAA8CC425036399004274EB /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC325036399004274EB /* Modes.swift */; };
 		6EAA8CC6250363A5004274EB /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC5250363A5004274EB /* Mode.swift */; };
@@ -103,7 +97,6 @@
 		6E0375E125248B0B00C64563 /* RatioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioUtils.swift; sourceTree = "<group>"; };
 		6E10DBAF25A4AD3F006B25B2 /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		6E26ABBC25013F35004ACB90 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		6E26C003252614B20044B0A9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		6E3422CB25A34EBC00552502 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6E3422D125A34ED300552502 /* UIViewExtnesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtnesion.swift; sourceTree = "<group>"; };
 		6E3422D625A34F0100552502 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -118,10 +111,6 @@
 		6E3725D725206BAD0095D7FB /* ArcadeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeEntry.swift; sourceTree = "<group>"; };
 		6E3725E225206D840095D7FB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		6E3725F125206DD80095D7FB /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
-		6E73A07925303B0C001C1E7A /* ArcadeRatioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeRatioView.swift; sourceTree = "<group>"; };
-		6E73A07D25303B84001C1E7A /* ArcadeRatioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeRatioCell.swift; sourceTree = "<group>"; };
-		6E73A08525304D9F001C1E7A /* ArcadeHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeHistoryView.swift; sourceTree = "<group>"; };
-		6E73A08925304DC2001C1E7A /* ArcadeHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeHistoryCell.swift; sourceTree = "<group>"; };
 		6E73A0AC2530557F001C1E7A /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		6E73A0B025305917001C1E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E76B5EA25A5745C0038650B /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
@@ -136,7 +125,6 @@
 		6E92C06D25176610009E5E48 /* koverwatch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koverwatch.ttf; sourceTree = "<group>"; };
 		6EA025762503CC83004B4FC4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		6EA025792503CD57004B4FC4 /* Arcade.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Arcade.geojson; sourceTree = "<group>"; };
-		6EA9255B2530775A0046F419 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		6EAA8CBF25036150004274EB /* koverwatch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koverwatch.ttf; sourceTree = "<group>"; };
 		6EAA8CC325036399004274EB /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
 		6EAA8CC5250363A5004274EB /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
@@ -220,12 +208,6 @@
 		6E26C002252614A40044B0A9 /* history */ = {
 			isa = PBXGroup;
 			children = (
-				6E26C003252614B20044B0A9 /* HistoryView.swift */,
-				6EA9255B2530775A0046F419 /* HistoryViewModel.swift */,
-				6E73A07925303B0C001C1E7A /* ArcadeRatioView.swift */,
-				6E73A07D25303B84001C1E7A /* ArcadeRatioCell.swift */,
-				6E73A08525304D9F001C1E7A /* ArcadeHistoryView.swift */,
-				6E73A08925304DC2001C1E7A /* ArcadeHistoryCell.swift */,
 			);
 			path = history;
 			sourceTree = "<group>";
@@ -611,7 +593,6 @@
 				6EAA8CC425036399004274EB /* Modes.swift in Sources */,
 				6E0375E225248B0B00C64563 /* RatioUtils.swift in Sources */,
 				6EF4904625A74CF50052BF12 /* UIImageExtension.swift in Sources */,
-				6E73A07E25303B84001C1E7A /* ArcadeRatioCell.swift in Sources */,
 				6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */,
 				6E3422CC25A34EBC00552502 /* StringExtension.swift in Sources */,
 				6ED8D6822500C2B000B85CDC /* AppDelegate.swift in Sources */,
@@ -628,18 +609,13 @@
 				6E73A0AD2530557F001C1E7A /* DateUtils.swift in Sources */,
 				6E3422ED25A34FEF00552502 /* BaseViewModel.swift in Sources */,
 				6E34231B25A354CF00552502 /* MainVC.swift in Sources */,
-				6E73A08A25304DC2001C1E7A /* ArcadeHistoryCell.swift in Sources */,
-				6EA9255C2530775A0046F419 /* HistoryViewModel.swift in Sources */,
 				6E3422F125A3500800552502 /* AlertContent.swift in Sources */,
 				6E3422DD25A34F1A00552502 /* BaseVC.swift in Sources */,
 				6E0375D825247CDA00C64563 /* ColorExtension.swift in Sources */,
 				6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */,
-				6E73A08625304D9F001C1E7A /* ArcadeHistoryView.swift in Sources */,
 				6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */,
 				6EAA8CC6250363A5004274EB /* Mode.swift in Sources */,
-				6E26C004252614B20044B0A9 /* HistoryView.swift in Sources */,
 				6E92C05925174B62009E5E48 /* arcard_widget.intentdefinition in Sources */,
-				6E73A07A25303B0C001C1E7A /* ArcadeRatioView.swift in Sources */,
 				6E76B5EB25A5745C0038650B /* ModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
