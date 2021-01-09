@@ -28,13 +28,14 @@ class MainView: BaseView {
   
   let dateLabel = UILabel().then {
     $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
     $0.font = UIFont(name: "koverwatch", size: 20)
     $0.textColor = .white
   }
   
   let titleLabel = UILabel().then {
     $0.isSkeletonable = true
-    $0.linesCornerRadius = 6
+    $0.linesCornerRadius = 3
     $0.lastLineFillPercent = 50
     $0.numberOfLines = 2
     $0.textColor = .white
@@ -52,6 +53,7 @@ class MainView: BaseView {
     $0.font = UIFont(name: "koverwatch", size: 16)
     $0.text = "main_ratio_title".localized
     $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
   }
   
   let ratioDescLabel = UILabel().then {
@@ -59,25 +61,29 @@ class MainView: BaseView {
     $0.font = UIFont(name: "koverwatch", size: 12)
     $0.text = "main_ratio_desc".localized
     $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
   }
   
   let ratioValueLabel = UILabel().then {
+    $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 36)
-    $0.text = "60%"
-    $0.isSkeletonable = true
   }
   
   let todayLabel = UILabel().then {
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 20)
     $0.text = "main_overwatch_arcade_today".localized
+    $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
   }
   
   let remainTimeLabel = UILabel().then {
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 20)
-    $0.text = " 18:42:21"
+    $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
   }
   
   let arcadeImage1 = UIImageView().then {
@@ -102,9 +108,9 @@ class MainView: BaseView {
   
   let arcadeLabel1 = UILabel().then {
     $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 20)
-    $0.text = "섬멸전 경쟁전"
   }
   
   let modeView2 = ModeView()
@@ -131,7 +137,7 @@ class MainView: BaseView {
     )
     scrollView.addSubview(containerView)
     addSubViews(backgroundImage, historyButton, scrollView)
-    self.showSkeleton(usingColor: .gray, transition: .none)
+    self.showSkeleton(usingColor: .gray, transition: .crossDissolve(0.3))
     self.showAnimatedGradientSkeleton()
   }
   

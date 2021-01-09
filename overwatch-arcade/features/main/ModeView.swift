@@ -24,6 +24,7 @@ class ModeView: BaseView {
   
   let nameLabel = UILabel().then {
     $0.isSkeletonable = true
+    $0.linesCornerRadius = 3
     $0.textColor = .white
     $0.numberOfLines = 0
     $0.font = UIFont(name: "koverwatch", size: 20)
