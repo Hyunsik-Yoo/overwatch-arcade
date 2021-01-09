@@ -5,7 +5,7 @@ class ModeView: BaseView {
   
   let modeImage = UIImageView().then {
     $0.isSkeletonable = true
-    $0.backgroundColor = .red
+    $0.backgroundColor = .gray
     $0.layer.cornerRadius = 6
     $0.layer.masksToBounds = true
     $0.contentMode = .top
@@ -20,7 +20,6 @@ class ModeView: BaseView {
   let typeLabel = UILabel().then {
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 12)
-    $0.text = "3 v 3"
   }
   
   let nameLabel = UILabel().then {
@@ -28,7 +27,6 @@ class ModeView: BaseView {
     $0.textColor = .white
     $0.numberOfLines = 0
     $0.font = UIFont(name: "koverwatch", size: 20)
-    $0.text = "섬멸전 경쟁전"
   }
   
   override func setup() {

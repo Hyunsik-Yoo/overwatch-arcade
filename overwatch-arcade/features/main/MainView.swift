@@ -27,6 +27,7 @@ class MainView: BaseView {
   }
   
   let dateLabel = UILabel().then {
+    $0.isSkeletonable = true
     $0.font = UIFont(name: "koverwatch", size: 20)
     $0.textColor = .white
   }
@@ -34,7 +35,8 @@ class MainView: BaseView {
   let titleLabel = UILabel().then {
     $0.isSkeletonable = true
     $0.linesCornerRadius = 6
-    $0.numberOfLines = 0
+    $0.lastLineFillPercent = 50
+    $0.numberOfLines = 2
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 36)
   }
@@ -49,18 +51,21 @@ class MainView: BaseView {
     $0.textColor = UIColor(r: 218, g: 218, b: 218)
     $0.font = UIFont(name: "koverwatch", size: 16)
     $0.text = "main_ratio_title".localized
+    $0.isSkeletonable = true
   }
   
   let ratioDescLabel = UILabel().then {
     $0.textColor = UIColor(r: 108, g: 108, b: 108)
     $0.font = UIFont(name: "koverwatch", size: 12)
     $0.text = "main_ratio_desc".localized
+    $0.isSkeletonable = true
   }
   
   let ratioValueLabel = UILabel().then {
     $0.textColor = .white
     $0.font = UIFont(name: "koverwatch", size: 36)
     $0.text = "60%"
+    $0.isSkeletonable = true
   }
   
   let todayLabel = UILabel().then {
@@ -81,7 +86,6 @@ class MainView: BaseView {
     $0.contentMode = .top
     $0.backgroundColor = .gray
     $0.isSkeletonable = true
-    $0.showAnimatedGradientSkeleton()
   }
   
   let arcadeTypeContainer = UIView().then {
@@ -117,7 +121,7 @@ class MainView: BaseView {
   
   
   override func setup() {
-    isSkeletonable = true
+    self.isSkeletonable = true
     containerView.addSubViews(
       mayhemImage, dateLabel, titleLabel, ratioContainerView,
       ratioTitleLabel, ratioDescLabel, ratioValueLabel, todayLabel,
@@ -127,6 +131,7 @@ class MainView: BaseView {
     )
     scrollView.addSubview(containerView)
     addSubViews(backgroundImage, historyButton, scrollView)
+    self.showSkeleton(usingColor: .gray, transition: .none)
     self.showAnimatedGradientSkeleton()
   }
   
@@ -159,6 +164,7 @@ class MainView: BaseView {
     
     self.titleLabel.snp.makeConstraints { make in
       make.left.equalToSuperview().offset(24)
+      make.right.equalToSuperview().offset(-24)
       make.top.equalTo(self.dateLabel.snp.bottom).offset(16)
     }
     
@@ -281,6 +287,7 @@ class MainView: BaseView {
     self.modeView5.bind(mode: arcade.modes.tile_5)
     self.modeView6.bind(mode: arcade.modes.tile_6)
     self.modeView7.bind(mode: arcade.modes.tile_7)
+    self.hideSkeleton()
   }
   
   private func setMayhemTodayTitle() {
@@ -296,7 +303,6 @@ class MainView: BaseView {
       attributedText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
     }
     self.titleLabel.attributedText = attributedText
-    self.titleLabel.stopSkeletonAnimation()
   }
   
   private func setMayhemNotTodayTitle() {
@@ -324,7 +330,6 @@ class MainView: BaseView {
         let newSize = self.resizeImageByWidth(image: imageResult.image, newWidth: UIScreen.main.bounds.width - 48)
         
         self.arcadeImage1.image = imageResult.image.resize(targetSize: newSize)
-        
       case .failure( _):
         break
       }
