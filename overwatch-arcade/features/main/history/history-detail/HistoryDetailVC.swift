@@ -5,14 +5,16 @@ class HistoryDetailVC: BaseVC {
   
   private lazy var historyDetailView = HistoryDetailView(frame: self.view.frame)
   private let arcade: Arcade
+  private let modes: [Int: Mode]
   
   
-  static func instance(arcade: Arcade) -> HistoryDetailVC {
-    return HistoryDetailVC(arcade: arcade)
+  static func instance(arcade: Arcade, modes: [Int: Mode]) -> HistoryDetailVC {
+    return HistoryDetailVC(arcade: arcade, modes: modes)
   }
   
-  init(arcade: Arcade) {
+  init(arcade: Arcade, modes: [Int: Mode]) {
     self.arcade = arcade
+    self.modes = modes
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -25,12 +27,15 @@ class HistoryDetailVC: BaseVC {
     view = historyDetailView
     
     self.initilizeTableView()
+    self.historyDetailView.bind(arcade: self.arcade)
     
     Observable.from(optional: self.arcade.getModes()).bind(to: self.historyDetailView.modeTableView.rx.items(
       cellIdentifier: HistoryDetailCell.registerId,
       cellType: HistoryDetailCell.self
     )) { row, mode, cell in
-      cell.bind(mode: mode)
+      let currentMode = self.modes[mode.id]
+      
+      cell.bind(mode: currentMode ?? mode)
     }
     .disposed(by: disposeBag)
   }

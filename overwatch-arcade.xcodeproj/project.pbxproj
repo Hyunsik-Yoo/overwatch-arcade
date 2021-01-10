@@ -36,6 +36,7 @@
 		6E786C5925AAA1A600008458 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E786C5825AAA1A600008458 /* HistoryDetailView.swift */; };
 		6E786C5F25AAA5DF00008458 /* HistoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E786C5E25AAA5DF00008458 /* HistoryDetailVC.swift */; };
 		6E786C6325AAA91300008458 /* HistoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E786C6225AAA91300008458 /* HistoryDetailCell.swift */; };
+		6E786C6F25AB0C4B00008458 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E786C6E25AB0C4B00008458 /* ArrayExtension.swift */; };
 		6E92C04E25174B61009E5E48 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92C04D25174B61009E5E48 /* WidgetKit.framework */; };
 		6E92C05025174B61009E5E48 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92C04F25174B61009E5E48 /* SwiftUI.framework */; };
 		6E92C05325174B61009E5E48 /* arcard_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92C05225174B61009E5E48 /* arcard_widget.swift */; };
@@ -124,6 +125,7 @@
 		6E786C5825AAA1A600008458 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		6E786C5E25AAA5DF00008458 /* HistoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailVC.swift; sourceTree = "<group>"; };
 		6E786C6225AAA91300008458 /* HistoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCell.swift; sourceTree = "<group>"; };
+		6E786C6E25AB0C4B00008458 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		6E92C04C25174B61009E5E48 /* arcard-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "arcard-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92C04D25174B61009E5E48 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6E92C04F25174B61009E5E48 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -202,6 +204,7 @@
 				6E3422D125A34ED300552502 /* UIViewExtnesion.swift */,
 				6EFE519625A576AA00DB71DF /* UIImageViewExtension.swift */,
 				6EF4904525A74CF50052BF12 /* UIImageExtension.swift */,
+				6E786C6E25AB0C4B00008458 /* ArrayExtension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				6E3422F125A3500800552502 /* AlertContent.swift in Sources */,
 				6E3422DD25A34F1A00552502 /* BaseVC.swift in Sources */,
 				6E786C4425AA986200008458 /* OverwatchMockService.swift in Sources */,
+				6E786C6F25AB0C4B00008458 /* ArrayExtension.swift in Sources */,
 				6E0375D825247CDA00C64563 /* ColorExtension.swift in Sources */,
 				6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */,
 				6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */,

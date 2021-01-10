@@ -15,21 +15,21 @@ class HistoryVC: BaseVC {
     view = historyView
     
     self.initilizeTableView()
-    self.viewModel.fetchArcades()
+    self.viewModel.fetchModes()
   }
   
   override func bindViewModel() {
-    self.viewModel.output.arcades.bind(to: self.historyView.historyTableView.rx.items(
+    self.viewModel.output.history.bind(to: self.historyView.historyTableView.rx.items(
       cellIdentifier: HistoryCell.registerId,
       cellType: HistoryCell.self
     )) { row, arcade, cell in
-      cell.bind(arcade: arcade)
+      cell.bind(arcade: arcade, modes: self.viewModel.modes)
     }
     .disposed(by: disposeBag)
     
     self.viewModel.output.goToDetail
       .observeOn(MainScheduler.instance)
-      .bind(onNext: self.goToDetail(arcade:))
+      .bind(onNext: self.goToDetail)
       .disposed(by: disposeBag)
     
     self.viewModel.output.showSystemAlert
@@ -58,8 +58,8 @@ class HistoryVC: BaseVC {
     self.navigationController?.popViewController(animated: true)
   }
   
-  private func goToDetail(arcade: Arcade) {
-    let detailVC = HistoryDetailVC.instance(arcade: arcade)
+  private func goToDetail(arcade: Arcade, modes: [Int: Mode]) {
+    let detailVC = HistoryDetailVC.instance(arcade: arcade, modes: modes)
     
     self.navigationController?.pushViewController(detailVC, animated: true)
   }

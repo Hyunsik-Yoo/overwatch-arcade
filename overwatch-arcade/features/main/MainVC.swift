@@ -4,7 +4,7 @@ import RxSwift
 class MainVC: BaseVC {
   
   private lazy var mainView = MainView(frame: self.view.frame)
-  private let viewModel = MainViewModel(overwatchService: OverwatchMockService())
+  private let viewModel = MainViewModel(overwatchService: OverwatchService())
   
   
   static func instance() -> MainVC {

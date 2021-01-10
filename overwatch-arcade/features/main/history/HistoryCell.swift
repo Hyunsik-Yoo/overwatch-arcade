@@ -119,14 +119,14 @@ class HistoryCell: BaseTableViewCell {
     }
   }
   
-  func bind(arcade: Arcade){
+  func bind(arcade: Arcade, modes: [Int: Mode]){
     self.dateLabel.text = DateUtils.getDateFromString(dateString: arcade.created_at)
-    self.modeImage1.setImage(urlString: arcade.modes.tile_1.image)
-    self.modeImage2.setImage(urlString: arcade.modes.tile_2.image)
-    self.modeImage3.setImage(urlString: arcade.modes.tile_3.image)
-    self.modeImage4.setImage(urlString: arcade.modes.tile_4.image)
-    self.modeImage5.setImage(urlString: arcade.modes.tile_5.image)
-    self.modeImage6.setImage(urlString: arcade.modes.tile_6.image)
-    self.modeImage7.setImage(urlString: arcade.modes.tile_7.image)
+    self.modeImage1.setImage(urlString: modes[arcade.modes.tile_1.id]?.image ?? "")
+    self.modeImage2.setImage(urlString: modes[arcade.modes.tile_2.id]?.image ?? "")
+    self.modeImage3.setImage(urlString: modes[arcade.modes.tile_3.id]?.image ?? "")
+    self.modeImage4.setImage(urlString: modes[arcade.modes.tile_4.id]?.image ?? "")
+    self.modeImage5.setImage(urlString: modes[arcade.modes.tile_5.id]?.image ?? "")
+    self.modeImage6.setImage(urlString: modes[arcade.modes.tile_6.id]?.image ?? "")
+    self.modeImage7.setImage(urlString: modes[arcade.modes.tile_7.id]?.image ?? "")
   }
 }

@@ -6,6 +6,7 @@ class HistoryViewModel: BaseViewModel {
   let input = Input()
   let output = Output()
   
+  var modes: [Int: Mode] = .init()
   let overwatchService: OverwatchServiceProtocol
   
   struct Input {
@@ -13,8 +14,9 @@ class HistoryViewModel: BaseViewModel {
   }
   
   struct Output {
-    let arcades = PublishRelay<[Arcade]>()
-    let goToDetail = PublishRelay<Arcade>()
+    let modes = PublishRelay<[Mode]>()
+    let history = PublishRelay<[Arcade]>()
+    let goToDetail = PublishRelay<(Arcade, [Int: Mode])>()
     let showSystemAlert = PublishRelay<AlertContent>()
   }
   
@@ -24,14 +26,31 @@ class HistoryViewModel: BaseViewModel {
     super.init()
     
     self.input.tapCell
-      .withLatestFrom(self.output.arcades) { $1[$0] }
+      .withLatestFrom(self.output.history) { ($1[$0], self.modes) }
       .bind(to: self.output.goToDetail)
       .disposed(by: disposeBag)
   }
   
-  func fetchArcades() {
+  func fetchModes() {
+    self.overwatchService.fetchModes().subscribe(
+      onNext: { modes in
+        self.modes = modes.toDictionary { $0.id }
+        self.fetchHistory()
+      },
+      onError: { error in
+        if let error = error as? CommonError {
+          let alertContent = AlertContent(title: "Error in fetchArcades", message: error.description)
+          
+          self.output.showSystemAlert.accept(alertContent)
+        }
+      }
+    )
+    .disposed(by: disposeBag)
+  }
+  
+  func fetchHistory() {
     self.overwatchService.fetchArcadeHistory().subscribe(
-      onNext: self.output.arcades.accept,
+      onNext: self.output.history.accept,
       onError: { error in
         if let error = error as? CommonError {
           let alertContent = AlertContent(title: "Error in fetchArcades", message: error.description)

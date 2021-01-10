@@ -5,6 +5,7 @@ import RxSwift
 
 protocol OverwatchServiceProtocol {
   func fetchArcade() -> Observable<Arcade>
+  func fetchModes() -> Observable<[Mode]>
   func fetchArcadeHistory() -> Observable<[Arcade]>
 }
 
@@ -32,6 +33,23 @@ struct OverwatchService: OverwatchServiceProtocol {
     }
   }
   
+  func fetchModes() -> Observable<[Mode]> {
+    return Observable.create { observer -> Disposable in
+      let urlString = "https://overwatcharcade.today/api/overwatch/arcademodes"
+      
+      AF.request(urlString, method: .get).responseJSON { response in
+        if let value = response.value {
+          let modes: [Mode] = JsonUtils.toJson(object: value)!
+          
+          observer.onNext(modes)
+          observer.onCompleted()
+        }
+      }
+      
+      return Disposables.create()
+    }
+  }
+  
   func fetchArcadeHistory() -> Observable<[Arcade]> {
     return Observable.create { observer -> Disposable in
       Firestore.firestore().collection("arcade").getDocuments { (document, error) in
@@ -45,7 +63,6 @@ struct OverwatchService: OverwatchServiceProtocol {
             var arcades: [Arcade] = []
             for data in document.documents {
               let arcade = Arcade(map: data.data())
-
               arcades.append(arcade)
             }
 
