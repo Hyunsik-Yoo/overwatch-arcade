@@ -1,6 +1,6 @@
 import UIKit
 
-class HistoryView: BaseView {
+class HistoryDetailView: BaseView {
   
   let backButton = UIButton().then {
     $0.setImage(UIImage(named: "ic_back"), for: .normal)
@@ -17,21 +17,22 @@ class HistoryView: BaseView {
   }
   
   let descriptionLabel = UILabel().then {
-    $0.text = "2020년 9월 30일부터 아케이드 모드 기록입니다."
-    $0.textColor = UIColor(r: 108, g: 108, b: 108)
-    $0.font = UIFont(name: "koverwatch", size: 12)
+    $0.text = "2020. 09. 30"
+    $0.textColor = .white
+    $0.font = UIFont(name: "koverwatch", size: 20)
   }
   
-  let historyTableView = UITableView().then {
+  let modeTableView = UITableView().then {
     $0.tableFooterView = UIView()
-    $0.backgroundColor = .clear
+    $0.allowsSelection = false
     $0.separatorStyle = .none
+    $0.backgroundColor = UIColor(r: 21, g: 21, b: 21)
   }
   
   
   override func setup() {
     backgroundColor = UIColor(r: 28, g: 30, b: 31)
-    addSubViews(backButton, titleLabel, headerContainer, descriptionLabel, historyTableView)
+    addSubViews(backButton, titleLabel, headerContainer, descriptionLabel, modeTableView)
   }
   
   override func bindConstraints() {
@@ -48,7 +49,7 @@ class HistoryView: BaseView {
     self.headerContainer.snp.makeConstraints { make in
       make.left.right.equalToSuperview()
       make.top.equalTo(self.titleLabel.snp.bottom).offset(16)
-      make.height.equalTo(44)
+      make.height.equalTo(68)
     }
     
     self.descriptionLabel.snp.makeConstraints { make in
@@ -56,9 +57,13 @@ class HistoryView: BaseView {
       make.centerY.equalTo(self.headerContainer)
     }
     
-    self.historyTableView.snp.makeConstraints { make in
+    self.modeTableView.snp.makeConstraints { make in
       make.left.right.bottom.equalToSuperview()
       make.top.equalTo(self.headerContainer.snp.bottom)
     }
+  }
+  
+  func bind(arcade: Arcade) {
+    self.descriptionLabel.text = DateUtils.getDateFromString(dateString: arcade.created_at)
   }
 }

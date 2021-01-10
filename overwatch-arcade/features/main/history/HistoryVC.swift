@@ -27,6 +27,11 @@ class HistoryVC: BaseVC {
     }
     .disposed(by: disposeBag)
     
+    self.viewModel.output.goToDetail
+      .observeOn(MainScheduler.instance)
+      .bind(onNext: self.goToDetail(arcade:))
+      .disposed(by: disposeBag)
+    
     self.viewModel.output.showSystemAlert
       .observeOn(MainScheduler.instance)
       .bind(onNext: self.showSystemAlert(alert:))
@@ -45,9 +50,23 @@ class HistoryVC: BaseVC {
       HistoryCell.self,
       forCellReuseIdentifier: HistoryCell.registerId
     )
+    self.historyView.historyTableView.rx.setDelegate(self)
+      .disposed(by: disposeBag)
   }
   
   private func popupVC() {
     self.navigationController?.popViewController(animated: true)
+  }
+  
+  private func goToDetail(arcade: Arcade) {
+    let detailVC = HistoryDetailVC.instance(arcade: arcade)
+    
+    self.navigationController?.pushViewController(detailVC, animated: true)
+  }
+}
+
+extension HistoryVC: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.viewModel.input.tapCell.onNext(indexPath.row)
   }
 }

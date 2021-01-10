@@ -3,12 +3,18 @@ import RxCocoa
 
 class HistoryViewModel: BaseViewModel {
   
+  let input = Input()
   let output = Output()
   
   let overwatchService: OverwatchServiceProtocol
   
+  struct Input {
+    let tapCell = PublishSubject<Int>()
+  }
+  
   struct Output {
     let arcades = PublishRelay<[Arcade]>()
+    let goToDetail = PublishRelay<Arcade>()
     let showSystemAlert = PublishRelay<AlertContent>()
   }
   
@@ -16,6 +22,11 @@ class HistoryViewModel: BaseViewModel {
   init(overwatchService: OverwatchServiceProtocol) {
     self.overwatchService = overwatchService
     super.init()
+    
+    self.input.tapCell
+      .withLatestFrom(self.output.arcades) { $1[$0] }
+      .bind(to: self.output.goToDetail)
+      .disposed(by: disposeBag)
   }
   
   func fetchArcades() {
