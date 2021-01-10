@@ -1,0 +1,356 @@
+[
+  {
+    "user" : {
+      "battletag" : "Redhawk#11341",
+      "avatar" : "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
+    },
+    "is_today" : true,
+    "modes" : {
+      "tile_1" : {
+        "id" : 13,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "name" : "Château Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_2" : {
+        "id" : 69,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "name" : "Team Deathmatch",
+        "players" : "4v4"
+      },
+      "tile_3" : {
+        "id" : 27,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/F5FBB8508BED10536998423AC92EE461.jpg",
+        "name" : "Elimination",
+        "players" : "6v6"
+      },
+      "tile_4" : {
+        "id" : 56,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "name" : "Quick Play Classic",
+        "players" : "6v6"
+      },
+      "tile_5" : {
+        "id" : 71,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "name" : "Total Mayhem",
+        "players" : "6v6"
+      },
+      "tile_6" : {
+        "id" : 45,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/57111B9B6AC436BC4030F8D05ACC2A60.jpg",
+        "name" : "Mirrored Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_7" : {
+        "id" : 50,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "name" : "Mystery Heroes",
+        "players" : "6v6"
+      }
+    },
+    "created_at" : "2021-01-10T00:00:37+00:00"
+  },
+  {
+    "user" : {
+      "battletag" : "Redhawk#11341",
+      "avatar" : "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
+    },
+    "is_today" : true,
+    "modes" : {
+      "tile_1" : {
+        "id" : 13,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "name" : "Château Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_2" : {
+        "id" : 69,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "name" : "Team Deathmatch",
+        "players" : "4v4"
+      },
+      "tile_3" : {
+        "id" : 27,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/F5FBB8508BED10536998423AC92EE461.jpg",
+        "name" : "Elimination",
+        "players" : "6v6"
+      },
+      "tile_4" : {
+        "id" : 56,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "name" : "Quick Play Classic",
+        "players" : "6v6"
+      },
+      "tile_5" : {
+        "id" : 71,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "name" : "Total Mayhem",
+        "players" : "6v6"
+      },
+      "tile_6" : {
+        "id" : 45,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/57111B9B6AC436BC4030F8D05ACC2A60.jpg",
+        "name" : "Mirrored Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_7" : {
+        "id" : 50,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "name" : "Mystery Heroes",
+        "players" : "6v6"
+      }
+    },
+    "created_at" : "2021-01-10T00:00:37+00:00"
+  },
+  {
+    "user" : {
+      "battletag" : "Redhawk#11341",
+      "avatar" : "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
+    },
+    "is_today" : true,
+    "modes" : {
+      "tile_1" : {
+        "id" : 13,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "name" : "Château Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_2" : {
+        "id" : 69,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "name" : "Team Deathmatch",
+        "players" : "4v4"
+      },
+      "tile_3" : {
+        "id" : 27,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/F5FBB8508BED10536998423AC92EE461.jpg",
+        "name" : "Elimination",
+        "players" : "6v6"
+      },
+      "tile_4" : {
+        "id" : 56,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "name" : "Quick Play Classic",
+        "players" : "6v6"
+      },
+      "tile_5" : {
+        "id" : 71,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "name" : "Total Mayhem",
+        "players" : "6v6"
+      },
+      "tile_6" : {
+        "id" : 45,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/57111B9B6AC436BC4030F8D05ACC2A60.jpg",
+        "name" : "Mirrored Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_7" : {
+        "id" : 50,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "name" : "Mystery Heroes",
+        "players" : "6v6"
+      }
+    },
+    "created_at" : "2021-01-10T00:00:37+00:00"
+  },
+  {
+    "user" : {
+      "battletag" : "Redhawk#11341",
+      "avatar" : "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
+    },
+    "is_today" : true,
+    "modes" : {
+      "tile_1" : {
+        "id" : 13,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "name" : "Château Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_2" : {
+        "id" : 69,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "name" : "Team Deathmatch",
+        "players" : "4v4"
+      },
+      "tile_3" : {
+        "id" : 27,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/F5FBB8508BED10536998423AC92EE461.jpg",
+        "name" : "Elimination",
+        "players" : "6v6"
+      },
+      "tile_4" : {
+        "id" : 56,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "name" : "Quick Play Classic",
+        "players" : "6v6"
+      },
+      "tile_5" : {
+        "id" : 71,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "name" : "Total Mayhem",
+        "players" : "6v6"
+      },
+      "tile_6" : {
+        "id" : 45,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/57111B9B6AC436BC4030F8D05ACC2A60.jpg",
+        "name" : "Mirrored Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_7" : {
+        "id" : 50,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "name" : "Mystery Heroes",
+        "players" : "6v6"
+      }
+    },
+    "created_at" : "2021-01-10T00:00:37+00:00"
+  },
+  {
+    "user" : {
+      "battletag" : "Redhawk#11341",
+      "avatar" : "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
+    },
+    "is_today" : true,
+    "modes" : {
+      "tile_1" : {
+        "id" : 13,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "name" : "Château Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_2" : {
+        "id" : 69,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "name" : "Team Deathmatch",
+        "players" : "4v4"
+      },
+      "tile_3" : {
+        "id" : 27,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/F5FBB8508BED10536998423AC92EE461.jpg",
+        "name" : "Elimination",
+        "players" : "6v6"
+      },
+      "tile_4" : {
+        "id" : 56,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "name" : "Quick Play Classic",
+        "players" : "6v6"
+      },
+      "tile_5" : {
+        "id" : 71,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "name" : "Total Mayhem",
+        "players" : "6v6"
+      },
+      "tile_6" : {
+        "id" : 45,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/57111B9B6AC436BC4030F8D05ACC2A60.jpg",
+        "name" : "Mirrored Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_7" : {
+        "id" : 50,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "name" : "Mystery Heroes",
+        "players" : "6v6"
+      }
+    },
+    "created_at" : "2021-01-10T00:00:37+00:00"
+  },
+  {
+    "user" : {
+      "battletag" : "Redhawk#11341",
+      "avatar" : "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
+    },
+    "is_today" : true,
+    "modes" : {
+      "tile_1" : {
+        "id" : 13,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "name" : "Château Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_2" : {
+        "id" : 69,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "name" : "Team Deathmatch",
+        "players" : "4v4"
+      },
+      "tile_3" : {
+        "id" : 27,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/F5FBB8508BED10536998423AC92EE461.jpg",
+        "name" : "Elimination",
+        "players" : "6v6"
+      },
+      "tile_4" : {
+        "id" : 56,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "name" : "Quick Play Classic",
+        "players" : "6v6"
+      },
+      "tile_5" : {
+        "id" : 71,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "name" : "Total Mayhem",
+        "players" : "6v6"
+      },
+      "tile_6" : {
+        "id" : 45,
+        "label" : "Daily",
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/57111B9B6AC436BC4030F8D05ACC2A60.jpg",
+        "name" : "Mirrored Deathmatch",
+        "players" : "8 Player FFA"
+      },
+      "tile_7" : {
+        "id" : 50,
+        "label" : null,
+        "image" : "https:\/\/overwatcharcade.today\/img\/gamemodes\/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "name" : "Mystery Heroes",
+        "players" : "6v6"
+      }
+    },
+    "created_at" : "2021-01-10T00:00:37+00:00"
+  }
+]

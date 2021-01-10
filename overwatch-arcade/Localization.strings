@@ -4,3 +4,6 @@
 "main_ratio_title" = "내일 난장판 모드가 나올 확률";
 "main_ratio_desc" = "2020년 9월 30일부터 난장판 모드가 나왔던 비율입니다,";
 "main_overwatch_arcade_today" = "OVERWATCH TODAY ARCADE";
+
+// 히스토리 화면
+"history_title" = "HISTORY";

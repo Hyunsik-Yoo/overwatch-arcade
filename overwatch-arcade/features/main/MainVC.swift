@@ -39,4 +39,17 @@ class MainVC: BaseVC {
       .bind(onNext: self.mainView.bindArcade(arcade:))
       .disposed(by: disposeBag)
   }
+  
+  override func bindEvent() {
+    self.mainView.historyButton.rx.tap
+      .observeOn(MainScheduler.instance)
+      .bind(onNext: self.goToHistory)
+      .disposed(by: disposeBag)
+  }
+  
+  private func goToHistory() {
+    let historyVC = HistoryVC.instance()
+    
+    self.navigationController?.pushViewController(historyVC, animated: true)
+  }
 }

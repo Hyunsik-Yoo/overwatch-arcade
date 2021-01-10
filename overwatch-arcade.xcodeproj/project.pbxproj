@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5AEF6D68B07F6E87196DD6DB /* Pods_overwatch_arcade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */; };
-		6E0375C02524541800C64563 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0375BF2524541800C64563 /* PreviewData.swift */; };
-		6E0375CD2524557C00C64563 /* SampleArcade.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E0375CC2524557C00C64563 /* SampleArcade.json */; };
 		6E0375D825247CDA00C64563 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0375D725247CDA00C64563 /* ColorExtension.swift */; };
 		6E0375E225248B0B00C64563 /* RatioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0375E125248B0B00C64563 /* RatioUtils.swift */; };
 		6E10DBB025A4AD3F006B25B2 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E10DBAF25A4AD3F006B25B2 /* Localization.strings */; };
@@ -32,6 +30,9 @@
 		6E73A0B125305917001C1E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E73A0B025305917001C1E7A /* GoogleService-Info.plist */; };
 		6E76B5EB25A5745C0038650B /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E76B5EA25A5745C0038650B /* ModeView.swift */; };
 		6E7823BE25A6C9B000E7870F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7823BD25A6C9B000E7870F /* MainViewModel.swift */; };
+		6E786C3B25AA980B00008458 /* HistoryResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E786C3A25AA980B00008458 /* HistoryResponse.json */; };
+		6E786C4425AA986200008458 /* OverwatchMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E786C4325AA986200008458 /* OverwatchMockService.swift */; };
+		6E786C4A25AA98FF00008458 /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E786C4925AA98FF00008458 /* DataUtils.swift */; };
 		6E92C04E25174B61009E5E48 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92C04D25174B61009E5E48 /* WidgetKit.framework */; };
 		6E92C05025174B61009E5E48 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92C04F25174B61009E5E48 /* SwiftUI.framework */; };
 		6E92C05325174B61009E5E48 /* arcard_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92C05225174B61009E5E48 /* arcard_widget.swift */; };
@@ -44,17 +45,18 @@
 		6E92C0C625178961009E5E48 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCA250377EC004274EB /* CommonError.swift */; };
 		6E92C0CA25178975009E5E48 /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC325036399004274EB /* Modes.swift */; };
 		6E92C0CE25178978009E5E48 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC5250363A5004274EB /* Mode.swift */; };
-		6EA025772503CC83004B4FC4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA025762503CC83004B4FC4 /* Data.swift */; };
-		6EA0257A2503CD57004B4FC4 /* Arcade.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6EA025792503CD57004B4FC4 /* Arcade.geojson */; };
 		6EAA8CC025036151004274EB /* koverwatch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA8CBF25036150004274EB /* koverwatch.ttf */; };
 		6EAA8CC425036399004274EB /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC325036399004274EB /* Modes.swift */; };
 		6EAA8CC6250363A5004274EB /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC5250363A5004274EB /* Mode.swift */; };
 		6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CC8250363ED004274EB /* OverwatchService.swift */; };
 		6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8CCA250377EC004274EB /* CommonError.swift */; };
+		6EAB4AF625A9ECED00491C86 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAB4AF525A9ECED00491C86 /* HistoryView.swift */; };
+		6EAB4AFA25A9EF9500491C86 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAB4AF925A9EF9500491C86 /* HistoryVC.swift */; };
+		6EAB4AFE25A9F24400491C86 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAB4AFD25A9F24400491C86 /* HistoryViewModel.swift */; };
+		6EAB4B0225A9F4AE00491C86 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAB4B0125A9F4AE00491C86 /* HistoryCell.swift */; };
 		6ED8D6822500C2B000B85CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6812500C2B000B85CDC /* AppDelegate.swift */; };
 		6ED8D6842500C2B000B85CDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6832500C2B000B85CDC /* SceneDelegate.swift */; };
 		6ED8D6882500C2B200B85CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D6872500C2B200B85CDC /* Assets.xcassets */; };
-		6ED8D68B2500C2B200B85CDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D68A2500C2B200B85CDC /* Preview Assets.xcassets */; };
 		6ED8D68E2500C2B200B85CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */; };
 		6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6972500C94400B85CDC /* Arcade.swift */; };
 		6ED8D69A2500C9B700B85CDC /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8D6992500C9B700B85CDC /* JsonUtils.swift */; };
@@ -91,8 +93,6 @@
 		0D2DAFF68D0F09745A9D53E4 /* Pods-overwatch-arcade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-arcade.release.xcconfig"; path = "Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade.release.xcconfig"; sourceTree = "<group>"; };
 		1AF473342E2DB2D7BEDD1CAB /* Pods_overwatch_arcade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatch_arcade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3082978EF028F4AC32524457 /* Pods-overwatch-arcade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatch-arcade.debug.xcconfig"; path = "Target Support Files/Pods-overwatch-arcade/Pods-overwatch-arcade.debug.xcconfig"; sourceTree = "<group>"; };
-		6E0375BF2524541800C64563 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
-		6E0375CC2524557C00C64563 /* SampleArcade.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleArcade.json; sourceTree = "<group>"; };
 		6E0375D725247CDA00C64563 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		6E0375E125248B0B00C64563 /* RatioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioUtils.swift; sourceTree = "<group>"; };
 		6E10DBAF25A4AD3F006B25B2 /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
@@ -115,6 +115,9 @@
 		6E73A0B025305917001C1E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E76B5EA25A5745C0038650B /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
 		6E7823BD25A6C9B000E7870F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6E786C3A25AA980B00008458 /* HistoryResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HistoryResponse.json; sourceTree = "<group>"; };
+		6E786C4325AA986200008458 /* OverwatchMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchMockService.swift; sourceTree = "<group>"; };
+		6E786C4925AA98FF00008458 /* DataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
 		6E92C04C25174B61009E5E48 /* arcard-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "arcard-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92C04D25174B61009E5E48 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6E92C04F25174B61009E5E48 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -123,18 +126,19 @@
 		6E92C05525174B62009E5E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E92C05725174B62009E5E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E92C06D25176610009E5E48 /* koverwatch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koverwatch.ttf; sourceTree = "<group>"; };
-		6EA025762503CC83004B4FC4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		6EA025792503CD57004B4FC4 /* Arcade.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Arcade.geojson; sourceTree = "<group>"; };
 		6EAA8CBF25036150004274EB /* koverwatch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koverwatch.ttf; sourceTree = "<group>"; };
 		6EAA8CC325036399004274EB /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
 		6EAA8CC5250363A5004274EB /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		6EAA8CC8250363ED004274EB /* OverwatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchService.swift; sourceTree = "<group>"; };
 		6EAA8CCA250377EC004274EB /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		6EAB4AF525A9ECED00491C86 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		6EAB4AF925A9EF9500491C86 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		6EAB4AFD25A9F24400491C86 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		6EAB4B0125A9F4AE00491C86 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		6ED8D67E2500C2B000B85CDC /* overwatch-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "overwatch-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED8D6812500C2B000B85CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ED8D6832500C2B000B85CDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6ED8D6872500C2B200B85CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6ED8D68A2500C2B200B85CDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6ED8D68D2500C2B200B85CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ED8D68F2500C2B200B85CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED8D6972500C94400B85CDC /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
@@ -184,15 +188,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6E0375C32524544000C64563 /* preview */ = {
-			isa = PBXGroup;
-			children = (
-				6E0375CC2524557C00C64563 /* SampleArcade.json */,
-				6E0375BF2524541800C64563 /* PreviewData.swift */,
-			);
-			path = preview;
-			sourceTree = "<group>";
-		};
 		6E0375D625247CD200C64563 /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +203,10 @@
 		6E26C002252614A40044B0A9 /* history */ = {
 			isa = PBXGroup;
 			children = (
+				6EAB4AF525A9ECED00491C86 /* HistoryView.swift */,
+				6EAB4AF925A9EF9500491C86 /* HistoryVC.swift */,
+				6EAB4AFD25A9F24400491C86 /* HistoryViewModel.swift */,
+				6EAB4B0125A9F4AE00491C86 /* HistoryCell.swift */,
 			);
 			path = history;
 			sourceTree = "<group>";
@@ -229,6 +228,22 @@
 				6E3725D725206BAD0095D7FB /* ArcadeEntry.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		6E786C3925AA97DC00008458 /* mock-data */ = {
+			isa = PBXGroup;
+			children = (
+				6E786C3A25AA980B00008458 /* HistoryResponse.json */,
+			);
+			path = "mock-data";
+			sourceTree = "<group>";
+		};
+		6E786C4225AA985A00008458 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				6E786C4325AA986200008458 /* OverwatchMockService.swift */,
+			);
+			path = mock;
 			sourceTree = "<group>";
 		};
 		6E92C05125174B61009E5E48 /* arcard-widget */ = {
@@ -265,8 +280,8 @@
 		6EAA8CBD25036140004274EB /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E786C3925AA97DC00008458 /* mock-data */,
 				6EAA8CBE25036145004274EB /* font */,
-				6EA025792503CD57004B4FC4 /* Arcade.geojson */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -282,12 +297,10 @@
 		6EAA8CC125036363004274EB /* model */ = {
 			isa = PBXGroup;
 			children = (
-				6E0375C32524544000C64563 /* preview */,
 				6ED8D6972500C94400B85CDC /* Arcade.swift */,
 				6EAA8CC325036399004274EB /* Modes.swift */,
 				6EAA8CC5250363A5004274EB /* Mode.swift */,
 				6EAA8CCA250377EC004274EB /* CommonError.swift */,
-				6EA025762503CC83004B4FC4 /* Data.swift */,
 				6E3422F025A3500800552502 /* AlertContent.swift */,
 			);
 			path = model;
@@ -301,6 +314,7 @@
 				6E73A0AC2530557F001C1E7A /* DateUtils.swift */,
 				6E3422E025A34F4900552502 /* AlertUtils.swift */,
 				6E3422E425A34FC000552502 /* NetworkActivityLogger.swift */,
+				6E786C4925AA98FF00008458 /* DataUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -308,6 +322,7 @@
 		6EAA8CC7250363DF004274EB /* services */ = {
 			isa = PBXGroup;
 			children = (
+				6E786C4225AA985A00008458 /* mock */,
 				6EAA8CC8250363ED004274EB /* OverwatchService.swift */,
 			);
 			path = services;
@@ -370,17 +385,8 @@
 				6ED8D68C2500C2B200B85CDC /* LaunchScreen.storyboard */,
 				6E73A0B025305917001C1E7A /* GoogleService-Info.plist */,
 				6ED8D68F2500C2B200B85CDC /* Info.plist */,
-				6ED8D6892500C2B200B85CDC /* Preview Content */,
 			);
 			path = "overwatch-arcade";
-			sourceTree = "<group>";
-		};
-		6ED8D6892500C2B200B85CDC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6ED8D68A2500C2B200B85CDC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		EAC6625BFCAFA897FC614D16 /* Frameworks */ = {
@@ -489,14 +495,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA0257A2503CD57004B4FC4 /* Arcade.geojson in Resources */,
 				6EAA8CC025036151004274EB /* koverwatch.ttf in Resources */,
 				6ED8D68E2500C2B200B85CDC /* LaunchScreen.storyboard in Resources */,
-				6ED8D68B2500C2B200B85CDC /* Preview Assets.xcassets in Resources */,
 				6ED8D6882500C2B200B85CDC /* Assets.xcassets in Resources */,
 				6E10DBB025A4AD3F006B25B2 /* Localization.strings in Resources */,
-				6E0375CD2524557C00C64563 /* SampleArcade.json in Resources */,
 				6E73A0B125305917001C1E7A /* GoogleService-Info.plist in Resources */,
+				6E786C3B25AA980B00008458 /* HistoryResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,28 +593,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3422D725A34F0100552502 /* BaseView.swift in Sources */,
+				6EAB4AFA25A9EF9500491C86 /* HistoryVC.swift in Sources */,
 				6E34231725A353DB00552502 /* MainView.swift in Sources */,
 				6EAA8CC425036399004274EB /* Modes.swift in Sources */,
 				6E0375E225248B0B00C64563 /* RatioUtils.swift in Sources */,
 				6EF4904625A74CF50052BF12 /* UIImageExtension.swift in Sources */,
 				6EAA8CCB250377EC004274EB /* CommonError.swift in Sources */,
 				6E3422CC25A34EBC00552502 /* StringExtension.swift in Sources */,
+				6EAB4AF625A9ECED00491C86 /* HistoryView.swift in Sources */,
 				6ED8D6822500C2B000B85CDC /* AppDelegate.swift in Sources */,
 				6ED8D6842500C2B000B85CDC /* SceneDelegate.swift in Sources */,
-				6E0375C02524541800C64563 /* PreviewData.swift in Sources */,
 				6EFE519725A576AA00DB71DF /* UIImageViewExtension.swift in Sources */,
 				6ED8D69A2500C9B700B85CDC /* JsonUtils.swift in Sources */,
 				6E3422D225A34ED300552502 /* UIViewExtnesion.swift in Sources */,
+				6EAB4AFE25A9F24400491C86 /* HistoryViewModel.swift in Sources */,
 				6E7823BE25A6C9B000E7870F /* MainViewModel.swift in Sources */,
+				6E786C4A25AA98FF00008458 /* DataUtils.swift in Sources */,
 				6E3422E525A34FC000552502 /* NetworkActivityLogger.swift in Sources */,
-				6EA025772503CC83004B4FC4 /* Data.swift in Sources */,
 				6E3422E925A34FDB00552502 /* BaseTableViewCell.swift in Sources */,
 				6E3422E125A34F4900552502 /* AlertUtils.swift in Sources */,
+				6EAB4B0225A9F4AE00491C86 /* HistoryCell.swift in Sources */,
 				6E73A0AD2530557F001C1E7A /* DateUtils.swift in Sources */,
 				6E3422ED25A34FEF00552502 /* BaseViewModel.swift in Sources */,
 				6E34231B25A354CF00552502 /* MainVC.swift in Sources */,
 				6E3422F125A3500800552502 /* AlertContent.swift in Sources */,
 				6E3422DD25A34F1A00552502 /* BaseVC.swift in Sources */,
+				6E786C4425AA986200008458 /* OverwatchMockService.swift in Sources */,
 				6E0375D825247CDA00C64563 /* ColorExtension.swift in Sources */,
 				6EAA8CC9250363ED004274EB /* OverwatchService.swift in Sources */,
 				6ED8D6982500C94400B85CDC /* Arcade.swift in Sources */,
@@ -811,7 +819,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"overwatch-arcade/Preview Content\"";
 				DEVELOPMENT_TEAM = X975A2HM62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "overwatch-arcade/Info.plist";
@@ -834,7 +841,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"overwatch-arcade/Preview Content\"";
 				DEVELOPMENT_TEAM = X975A2HM62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "overwatch-arcade/Info.plist";

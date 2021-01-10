@@ -12,7 +12,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
     window?.backgroundColor = UIColor.init(r: 28, g: 28, b: 28)
-    window?.rootViewController = MainVC.instance()
+    
+    let rootVC = UINavigationController(rootViewController: MainVC.instance()).then {
+      $0.isNavigationBarHidden = true
+    }
+    window?.rootViewController = rootVC
     window?.makeKeyAndVisible()
   }
 
